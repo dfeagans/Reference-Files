@@ -116,7 +116,7 @@ Folder Structure of Ubuntu: https://help.ubuntu.com/community/LinuxFilesystemTre
 The standard Ubuntu directory structure mostly follows the [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/), which can be referred to for more detailed information.
 
 Instead of the "\" in Windows, Linux utilizes the "/":  
-![Linux File System Summary](/images/LinuxFileSystem.png)
+![Linux File System Summary](../images/LinuxFileSystem.png)
 
 - /bin is a place for most commonly used [terminal](https://help.ubuntu.com/community/UsingTheTerminal) commands, like ls, mount, rm, etc.
 - /boot contains files needed to start up the system, including the [Linux kernel](https://help.ubuntu.com/community/Kernel), a RAM disk image and [bootloader](https://help.ubuntu.com/community/GrubHowTo) configuration files.
