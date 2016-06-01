@@ -5,91 +5,93 @@ __Notes from Lecture 4b of Startup Class and then Personal Modifications)__
 Built in Tutorial is pulled up using: `M-x help-with-tutorial`
 
 ## GENERAL ##
-***Legend**: Ctrl(Control-Key) = C / Meta(Alt-Key) = M*<br>
-`emacs -nw` opens emacs without a window, since I'm working in a terminal. I have it aliased to just `emacs` in my .bashrc. Sometimes it's useful to start emacs without customizations to debug emacs itself (or your init.el file), to do so use the -q option (open without customizations), or -Q (open without customizations or spash screen).<br>
+**Legend**: Ctrl(Control-Key) = C / Meta(Alt-Key) = M*  
+`emacs -nw` opens emacs without a window, since I'm working in a terminal. I have it aliased to just `emacs` in my .bashrc. Sometimes it's useful to start emacs without customizations to debug emacs itself (or your init.el file), to do so use the -q option (open without customizations), or -Q (open without customizations or spash screen).  
 
-`C-x C-c` = Exit (it will prompt you in-case you need to save anything.<br>
-`C-xz` = disconnects Emacs and puts it in background to let you run bash, etc.<br>
-`fg` = foreground - brings Emacs back up where you were at.<br>
-`C-l` = redraws the screen with the current line in the middle of the screen. Hitting it again, or `C-l C-l` = brings current line to the top of the screen.<br>
-`C-g or <esc><esc><esc>` = quits the current Emacs command a resets it for input. Good if Emacs stops responding.<br>
-`M-/` will autocomplete whatever you're typing. Keep hitting it to scroll the entire list. Alternatives are hippie-expand and yasnippet.<br>
-`C-/` will undo a change. C-x u, C-_ also work.<br>
-`M-;` = comments whatever you have selected. If you don't have anything selected, it adds the comment to the end of the row.<br>
+`C-x C-c` = Exit (it will prompt you in-case you need to save anything.  
+`C-xz` = disconnects Emacs and puts it in background to let you run bash, etc.  
+`fg` = foreground - brings Emacs back up where you were at.  
+`C-l` = redraws the screen with the current line in the middle of the screen. Hitting it again, or `C-l C-l` = brings current line to the top of the screen.  
+`C-g or <esc><esc><esc>` = quits the current Emacs command a resets it for input. Good if Emacs stops responding.  
+`M-/` will autocomplete whatever you're typing. Keep hitting it to scroll the entire list. Alternatives are [hippie-expand](http://trey-jackson.blogspot.com/2007/12/emacs-tip-5-hippie-expand.html) and yasnippet.  
+`C-/` will undo a change. C-x u, C-_ also work.  
+`M-;` = comments whatever you have selected. If you don't have anything selected, it adds the comment to the end of the row.  
 `Alt+!` = prompts you to run one shell command.
 
 ## FILES ##
-`C-x C-f` = find file to open or create. You can type to search for it or use the arrows to navigate around and select it.<br>
-`C-f C-b` shows all the files you've opened and modified.<br>
-`C-x b` = lets you quickly switch between the currently opened buffers just by typing it's name. Tab auto-completes like Bash which is very useful<br>
-`C-x C-s` = saves current buffer.<br>
-`C-x s` = individually prompts to save ALL the buffers that have been modified.<br>
-`C-x s d` = runs `diff-buffer-with-file` and shows you the modifications you've made before saving. Super useful.<br>
-`C-x k` lets you select which buffer or window to kill using the typical mini-buffer methods at the bottom (typing or arrow movement).<br>
+`C-x C-f` = find file to open or create. You can type to search for it or use the arrows to navigate around and select it.  
+`C-f C-b` shows all the files you've opened and modified.  
+`C-x b` = lets you quickly switch between the currently opened buffers just by typing it's name. Tab auto-completes like Bash which is very useful.  
+`C-x C-s` = saves current buffer.  
+`C-x s` = individually prompts to save ALL the buffers that have been modified.  
+`C-x s d` = runs `diff-buffer-with-file` and shows you the modifications you've made before saving. Super useful.  
+`C-x k` lets you select which buffer or window to kill using the typical mini-buffer methods at the bottom (typing or arrow movement).  
 `C-x C-b` = shows current buffers in a separate dir'd window. Navigate to line and hit enter to open. Could be useful for huge project.
 
 ## AUTOSAVE BACKUPS ##
 Emacs preiodically creates an autosave file (denoted by # before and after the name). If you want to recover that, find the file like normal using `C-x C-f` then use `M-x recover-file` then say yes to retrieve it. **Note that I turned off the auto-saves in my init.el though**.
 
 ## MOVEMENT ##
-**Moving cursor** - `C-f` forward / `C-b` back / `C-p` previous line up / `C-n` next line down / (same as GNU screen)<br>
-**Moving cursor fast** - `M-f` forward a word / `M-b` backward a word. I've got custom functions mapped in my init.el that use `M-n` and `M-p` to move up and down 5 lines.<br>
-`C-v` or `PgUp` button = page up. Useful with meta-key for scrolling other buffer window.<br>
-`M-v` or `PgDn` button = page down. Useful with meta-key for scrolling other buffer window.<br>
-`C-j` = just like Enter or RET key, but does indent as well! If you want to get RET to do the same thing, use: `(local-set-key (kbd "RET") 'newline-and-indent)` in the init.el.<br>
-`C-a` = moves to the __beginning of the line__.<br>
-`M-a` = moves to the __beginning of the sentence__.<br>
-`C-e` = moves to the __end of the line__.<br>
-`M-e` = moves to the __end of the sentence__.<br>
-`M-g-g` = lets you move to a specific line.<br>
-`M->` = moves to __end of the file__.<br>
+Moving cursor - `C-f` forward / `C-b` back / `C-p` previous line up / `C-n` next line down / (same as GNU screen)  
+Moving cursor fast - `M-f` forward a word / `M-b` backward a word. I've got custom functions mapped in my init.el that use `M-n` and `M-p` to move up and down 5 lines.  
+`C-v` or `PgUp` button = page up. Useful with meta-key for scrolling other buffer window.  
+`M-v` or `PgDn` button = page down. Useful with meta-key for scrolling other buffer window.  
+`C-j` = just like Enter or RET key, but does indent as well! If you want to get RET to do the same thing, use: `(local-set-key (kbd "RET") 'newline-and-indent)` in the init.el.  
+`C-a` = moves to the __beginning of the line__.  
+`M-a` = moves to the __beginning of the sentence__.  
+`C-e` = moves to the __end of the line__.  
+`M-e` = moves to the __end of the sentence__.  
+`M-g-g` = lets you move to a specific line.  
+`M->` = moves to __end of the file__.  
 `M-<` = moves to the __start of the file__.
 
-PREFIX ARGUMENTS    
-     You can add prefix arguments to commands using C-u to do things multiple times ex. C-u 8 C-p moves the cursor up 8 lines. C-u 100 A puts down 100 "A"s.
+PREFIX ARGUMENTS  
+You can add prefix arguments to commands using C-u to do things multiple times ex. C-u 8 C-p moves the cursor up 8 lines. C-u 100 A puts down 100 "A"s.
 
-CUT/PASTE (you can kill several lines and paste (yank) them all at once with C-y.
-     C-k = (kill) cut from cursor to end of the line.
-     M-k = (kill) cut from cursor to the end of the sentence.
-     M-w to copy, then C-y to paste.
-     SELECTING TEXT to kill: C-<spc> then move to highlight. Hit C-w to kill(cut) your selection. Hitting M-w just copies your selection to the kill ring.
-     C-y = (yank) paste the killed text in.
-     M-y = yanks the previous kill before the C-y one.
+## CUT/PASTE ##
+SELECTING TEXT to kill: `C-<spc>` then use typical move keys to highlight.  
+`C-w` to kill(cut) your selection.  
+`M-w` to copy.  
+`C-k` = (kill) cut from cursor to end of the line.  
+`M-k` = (kill) cut from cursor to the end of the sentence.  
+`M-w` just copies your selection to the kill ring.  
+`C-y` = (yank) paste the killed text in.  
+`M-y` = yanks the previous kill before the C-y one.
 
-UNDO
-     C-/ = undoes last command.
+## UNDO ##
+`C-/` = undoes last command.
 
 ## EMACS COMMANDS ##
-     C-x = single character commands (as seen before, C-s saves the file, C-f find files, C-b lists the buffers, etc.
-     M-x = long macs commands ex. M-x replace-string then enter will prompt you to replace a word with another word everyplace after the current cursor position. M-x revert-buffer lets you quickly reload your modified file back to it's original state. M-x shell opens a bash shell in the buffer.
+`C-x` = single character commands (as seen before, C-s saves the file, C-f find files, C-b lists the buffers, etc.
+`M-x` = long macs commands ex. `M-x replace-string` then enter will prompt you to replace a word with another word everyplace after the current cursor position. `M-x revert-buffer` lets you quickly reload your modified file back to it's original state. `M-x shell` opens a bash shell in the buffer.
 
 ## MACROS ##
-    f3 = lets you start recording a macro (just like Excel macro, lets you do things multiple times).
-    f4 = stops recording the macro, and then after that pressing f4 would run the macro you just created.
+`f3` = lets you start recording a macro (just like Excel macro, lets you do things multiple times).
+`f4` = stops recording the macro, and then after that pressing f4 would run the macro you just created.
 
-SEARCHING
-     C-s = forward search. Everytime you hit C-s it will move to the next match (backspace to go back). Hit enter to leave cursor that position. As always C-g escapes out.
-     C-r = reverse search. Everytime you hit C-r it will move up to the next match (backspace to go back). Hit enter to leave cursor in that position. As always C-g escapes out.
-     M-s o = occur, searches current buffer and presents results in nicely formatted second window.
-     M-s s = multi-occur on all open windows. This is a custom added function in my init.el
+## SEARCHING ##
+`C-s` = forward search. Everytime you hit `C-s` it will move to the next match (backspace to go back). Hit enter to leave cursor that position. As always C-g escapes out.  
+`C-r` = reverse search. Everytime you hit `C-r` it will move up to the next match (backspace to go back). Hit enter to leave cursor in that position. As always, `C-g` escapes out.  
+`M-s o` = occur, searches current buffer and presents results in nicely formatted second window.  
+`M-s s` = multi-occur on all open windows. This is a custom added function in my init.el
 
-WINDOWS
-     C-x 1 = Gets back to one window
-     C-x 2 = Splits into 2 windows (one ABOVE the other). Cursor stays in top frame.
-     C-x 3 = Splits into 2 windows (one BESIDE the other). Cursor stays in the original frame.
-     C-x 0 = closes the current window
-     M-o (and possibly i?)= moves to (o)ther frame if available.   
-     M-PageUp and M-PageDown = scrolls up and down the frame you DON'T have selected.
-     C-M-v = scrolls the frame that you DON'T have selected.
-     C-x ^ = increases size of current frame when split horizontally. use C-u # C-x ^ to increase frame size by # rows.
-     C-x } or { = adjusts size of current frame when split vertically.
-     C-x + =  evens out window sizes
+## WINDOWS ##  
+`C-x 1` = Gets back to one window.  
+`C-x 2` = Splits into 2 windows (one ABOVE the other). Cursor stays in top frame.  
+`C-x 3` = Splits into 2 windows (one BESIDE the other). Cursor stays in the original frame.  
+`C-x 0` = closes the current window.  
+`M-o` (and possibly i?)= moves to (o)ther frame if available.  
+`M-PageUp and M-PageeDown` = scrolls up and down the frame you DON'T have selected.  
+`C-M-v` = scrolls the frame that you DON'T have selected.  
+`C-x ^` = increases size of current frame when split horizontally. use C-u # C-x ^ to increase frame size by # rows.  
+`C-x }` or `C-x {` = adjusts size of current frame when split vertically.  
+`C-x +` =  evens out window sizes.
 
-FUNCTIONS FOR HELPING KEY-BINDINGS
-     describe-function = lets you type in a function name and gives you all the info about it. (C-x h f due to my custom keybindings where C-h is used for backspace)
-     describe-key = prompts you for a key-chord, then describes the function you have bound to it. (C-x h k due to my custom keybindings where C-h is used for backspace)
-     describe-variable = tells you the value of the variable current. Bound to C-h v (C-x h v due to my custom keybindings where C-h is used for backspace) Useful for debugging things. It's also useful because variables control whether modes are on and off and different settings (like column-width for example). This is useful for identifying 
-     describe-mode =  tells you all the info about the current mode and most importantly all the keybindings (tied to C-x h m due to my use of C-h as backspace). It also tells you the hooks for the mode.
+### FUNCTIONS FOR HELPING KEY-BINDINGS  (employed using M-x) ###
+describe-function = lets you type in a function name and gives you all the info about it. (`C-x h f` due to my custom keybindings where `C-h` is used for backspace).  
+describe-key = prompts you for a key-chord, then describes the function you have bound to it. (`C-x h k` due to my custom keybindings where `C-h` is used for backspace).  
+describe-variable = tells you the value of the variable current. Bound to `C-h v` (`C-x h v` due to my custom keybindings where `C-h` is used for backspace) Useful for debugging things. It's also useful because variables control whether modes are on and off and different settings (like column-width for example).  
+describe-mode =  tells you all the info about the current mode and most importantly all the keybindings (tied to `C-x h m` due to my use of `C-h` as backspace). It also tells you the hooks for the mode.
 
 The above functions are really useful for determining what keys and what functions to bind to different keys. The other thing that was useful was digging into the source for the modules I was loading to figure out what keybindings I had to remove and what functions they were calling to move them.
 
@@ -100,27 +102,27 @@ Check my init.el and my-packages.el because I have examples on setting up the di
 
 For further information on customizing the font-lock keywords reference: http://emacswiki.org/emacs/AddKeywords
 
-
-Insanely Good Article about Creating Your own Emacs Extensions:
-http://toumorokoshi.github.io/emacs-from-scratch-part-3-extending-emacs-with-elisp.html
+Insanely Good Article about Creating Your own Emacs Extensions:  
+http://toumorokoshi.github.io/emacs-from-scratch-part-3-extending-emacs-with-elisp.html  
 Check emacs from scratch part 1&2 for a note about hooks.
 
-Customizing an Installed Module
+### Customizing an Installed Module ###
 You can learn all the options, settings, and commands using M-x customize-group RET package-name RET. Then you navigate to the option you're looking for (note you can hit enter over More to get a more verbose description. Then hit enter while on [ State: ] to see a list of options to select. After changing the option, hit enter while on [ State: ] again and it will prompt you to save it. If you save it for future session it will add the line to your .init.el. It will have extra formatting with it, but you can just steal the config line and add it in the appropriate place to be cleaner.
 
-Customizing Color Themes
-M-x describe-face RET identifies what emacs calls the region your cursors is on so you can add a line to the init.el to change the color. Even better, hitting enter again actually shows you every parameter.
-what-cursor-position is even more powerful an bound to C-u C-x =
-list-faces-display lists ALL the faces avialable.
+### Customizing Color Themes ###
+`M-x` describe-face RET identifies what emacs calls the region your cursors is on so you can add a line to the init.el to change the color. Even better, hitting enter again actually shows you every parameter.  
+`what-cursor-position` is even more powerful an bound to `C-u C-x =`.
+`list-faces-display` lists ALL the faces avialable.
 
-Actual Themes: If I really want to use themes, the I have to change $TERM to xterm-256color. Definitely in my .screenrc and then somehow in normal terminal (likely export it in my .bashrc). Then I can just use install the theme, test it out using M-x load-theme, and make it start with it by adding (load-theme 'themeName t)
+### Actual Themes ###
+If I really want to use themes, the I have to change $TERM to xterm-256color. Definitely in my .screenrc and then somehow in normal terminal (likely export it in my .bashrc). Then I can just use install the theme, test it out using M-x load-theme, and make it start with it by adding `(load-theme 'themeName t)`.
 
-Performance Analysis
-To find what's slowing Emacs down:
-Invoke M-x profiler-start RET RET (the second RET is to confirm cpu);Do some typing, preferably an entire paragraph or more;Invoke M-x profiler-report in my init.el.
+### Performance Analysis ###
+To find what's slowing Emacs down:  
+Invoke `M-x profiler-start RET RET` (the second RET is to confirm cpu); Do some typing, preferably an entire paragraph or more;Invoke `M-x profiler-report` in my init.el.
 
-General Emacs Lisp Commands
-emacs List and Lisp-Interaction-Mode
+### General Emacs Lisp Commands ###
+#### emacs List and Lisp-Interaction-Mode ####
 (Download This and Go Through It ----> Summary of Learn Emacs Lisp in 15 minutes)
 Being in "M-x lisp-interaction-mode" lets you evaluate lisp expressions using:
 C-j = when the cursor is at the end of the line, it runs the command before it and prints the results to the next line.
