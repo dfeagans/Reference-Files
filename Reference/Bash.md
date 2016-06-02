@@ -101,39 +101,68 @@ str2)
 esac
 ```
 
-Example (remember the $1 gets quoted to turn it into a string, so the option is a string:
-case $1 in-i)   count='grep ^i $2 | wc -l'   echo "The number of lines in $2 that start with an i is $count"   ;;-e)   count='grep ^e $2 | wc -l'   echo "The number of lines in $2 that start with an e is $count"   ;;*)   echo "That option is not recognized"   ;;esac
-Loopsfor loopThe first form of the for statement. In this form, the for statement executes once for each item in the list. This list can be a variable that contains several words separated by spaces, or it can be a list of values that is typed directly into the statement. Each time through the loop, the variable var1 is assigned the current item in the list, until the last one is reached:
+Example (remember the $1 gets quoted to turn it into a string, so the option is a string being compared to "-i" and "-e":
+```bash
+case $1 in
+-i)
+      count='grep ^i $2 | wc -l'
+      echo "The number of lines in $2 that start with an i is $count"
+      ;;
+-e)   
+      count='grep ^e $2 | wc -l'
+      echo "The number of lines in $2 that start with an e is $count"
+      ;;
+*)
+      echo "That option is not recognized"
+      ;;
+esac
+```
+
+#### Loops ####
+##### for loop #####
+The first form of the for statement. In this form, the for statement executes once for each item in the list. This list can be a variable that contains several words separated by spaces, or it can be a list of values that is typed directly into the statement. Each time through the loop, the variable var1 is assigned the current item in the list, until the last one is reached:
+```bash
 for var1 in list
 do
    commands
 done
+```
 
-Below is the second form. For this form, the for statement executes once for each item in the variable var1. When this syntax of the for statement is used, the shell program assumes that the var1 variable contains all the positional parameters that were passed in to the shell program on the command line. 
+Below is the second form. For this form, the for statement executes once for each item in the variable var1. When this syntax of the for statement is used, the shell program assumes that the var1 variable contains all the positional parameters that were passed in to the shell program on the command line.
+```bash
 for var1
 do
    statements
 done
+```
 
 The above is equivalent of the below:
+```bash
 for var1 in "$@"
 do
    statements
 done
+```
 
 The following is an example of the for statement. This example takes as command-line options any number of text files. The program reads in each of these files, converts all the letters to uppercase, and then stores the results in a file of the same name but with a .caps extension.
+```bash
 for file
 do
    tr a-z A-Z < $file >$file.caps
 done
+```
 
-while loopThis statement causes a block of code to be executed while a provided conditional expression is true. The syntax for the while statement is the following:
+##### while loop #####
+This statement causes a block of code to be executed while a provided conditional expression is true. The syntax for the while statement is the following:
+```bash
 while expression
 do
    statements
 done
+```
 
 Example program that lists the parameters that were passed to the program, along with the parameter number.
+```bash
 count=1
 while [ -n "$*" ]                                #-n tests whether non-zero in length
 do
@@ -141,15 +170,19 @@ do
    shift                                         #Shift command moves the command-line parameters over one to the left.
    count='expr $count + 1'
 done
+```
 
-until loop
+##### until loop #####
 Opposite of while loop. The until statement executes its code block while its conditional expression is false, and the while statement executes its code block while its conditional expression is true. Syntax:
+```bash
 until expression
 do
    commands
 done
+```
 
 The same example that was used for the while statement can be used for the until statement. All you have to do to make it work is negate the condition. This is shown in the following code:
+```bash
 count=1
 until [ -z "$*" ]                                #-z tests whether zero in length
 do
@@ -157,18 +190,23 @@ do
    shift
    count='expr $count + 1'
 done
+```
 
 The only difference between this example and the while statement example is that the -n test was changed to a  -z test option (test whether non-zero changed to test whether zero). In practice the until statement is not very useful, because it's likely you'll just use the more common while loop.
-The shift CommandThe shift command moves the current values stored in the positional parameters to the left one position. For example, if the values of the current positional parameters are:
-$1 = -r 
-$2 = file1 
+
+##### The shift Command #####
+The shift command moves the current values stored in the positional parameters to the left one position. For example, if the values of the current positional parameters are:  
+$1 = -r  
+$2 = file1  
 $3 = file2
 
-and you executed the shift command the resulting positional parameters would be as follows:
+If you executed the shift command the positional parameters would be as follows:
 $1 = file1 
 $2 = file2
 
 You can also move the positional parameters over more than one place by specifying a number with the shift command. This is a very useful command when you have a shell program that needs to parse command-line options. This is true because options are typically preceded by a hyphen and a letter that indicates what the option is to be used for. Because options are usually processed in a loop of some kind, you often want to skip to the next positional parameter once you have identified which option should be coming next. For example, the following shell program expects two command-line options, one that specifies an input file and one that specifies an output file. The program reads the input file, translates all the characters in the input file into uppercase, then stores the results in the specified output file.
+
+```bash
 while [ "$1" ]
 do
    if [ "$1" = "-i" ]; then
@@ -184,17 +222,24 @@ do
 done
 
 tr a-z A-Z < $infile > $outfile
+```
 
-FunctionsSyntax for function creation:
+#### Functions ####
+Syntax for function creation:
+```bash
 fname () {
    shell commands
 }
+```
 
 Once you have defined your function using one of these forms, you can invoke it by entering the following command:
-fname [parm1 parm2 parm3 ...]
+`fname [parm1 parm2 parm3 ...]`
 
 Notice that you can pass any number of parameters to your function. When you do pass parameters to a function, it sees those parameters as positional parameters, just as a shell program does when you pass it parameters on the command line.
+
 The following shell program contains several functions, each of which is performing a task associated with one of the command-line options. This example illustrates many of the topics covered in this section. It reads all the files that are passed on the command line and—depending on the option that was used—writes the files out in all uppercase letters, writes the files out in all lowercase letters, or prints the files.
+
+```bash
 upper () {
    shift
 
@@ -246,4 +291,5 @@ in
    *) usage_error $0;;
 esac
 ;}
+```
 
