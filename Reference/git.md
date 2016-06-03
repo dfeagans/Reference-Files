@@ -103,8 +103,8 @@ Git does lots of things locally since you clone the entire repo. This makes `git
      Comitted - The data has been "checked-in" to your local database and the revision is added to the your project's history.
 
 **Git Config File** - There are several config files, a global one for everyone on the computer, a user one specifically for you, and a repo one for each specific repositiory. The more specific configs override the global ones.
-     Setting user.name: git config --global user.name "Dane Feagans"
-     Setting user.email: git config --global user.email dane.feagans@gmail.com
+     Setting user.name: git config --global user.name "<firstName> <lastName>"
+     Setting user.email: git config --global user.email <name.lastName@gmail.com>
      Check Current Config Settings: git config --list
      Check Individual Config Settings: git config user.name
 
