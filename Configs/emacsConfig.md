@@ -96,7 +96,7 @@ BUNCH_OF_OTHER_TEXT
 [This is the link text](#headin)  <--- This gets turned into this html --->  <a href="#headin">This is the link text</a>
 ```
 
-## Ace-Jump Mode ##
+## [Ace-Jump Mode](https://github.com/winterTTr/ace-jump-mode) ##
 Let's you jump to different sections on the screen quickly.
 
 #### Key-Bindings: ####
@@ -107,7 +107,7 @@ Let's you jump to different sections on the screen quickly.
 I've made it so that `C-\` toggles folding/unfolding the current section and <f6> toggles folding/un-folding everything.
 
 ##WriteGood-Mode (stopped using this) ##
-https://github.com/bnbeckwith/writegood-mode
+https://github.com/bnbeckwith/writegood-mode  
 http://bnbeckwith.com/code/writegood-mode.html
 
 After downloading the writegood-mode.el and putting it into your .emacs.d directory just add the below to your init.el file.
