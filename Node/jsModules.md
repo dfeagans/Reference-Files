@@ -253,7 +253,7 @@ exports.name = function() {
 
 But note that, they are not the same thing. As I said earlier `module.exports` is the real deal, `exports` is just its little helper. Having said that, `exports` is the recommended object unless you are planning to change the object type of your module from the traditional 'module instance' to something else.
 
-### [Final Example of Exports vs Module.Exports](http://timnew.me/blog/2012/04/20/exports_vs_module_exports_in_node_js/) ### : http://timnew.github.io/blog/2012/04/20/exports_vs_module_exports_in_node_js/
+### [Final Example of Exports vs Module.Exports](http://timnew.me/blog/2012/04/20/exports_vs_module_exports_in_node_js/) ###
 
 I was confused about how require function works in node.js for a long time. I found when I require a module, sometimes I can get the object I want, but sometimes, I just got an empty object, which give the concern that we cannot export the object by assigning it to exports, but it seems somehow we can export a function by assignment.
 
