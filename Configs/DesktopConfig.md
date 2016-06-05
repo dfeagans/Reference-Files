@@ -82,7 +82,7 @@ Get the screen resolution for both screens (ex. 2400x1200 and 1080x920) add them
 ### Emacs Key-Bindings ###
 Xkeymacs (Emacs keybindings for Windows): [downloaded here](http://www.cam.hi-ho.ne.jp/oishi/indexen.html).
 
-Here's the exported configuration](xkeymacsConfig.reg). It has navigation commands, delete/backspace on the home-row, new-line C-j, and kill/yank stuff. Make sure to add C-o as well. It's the useful insert newline before current one. 
+Here's the [exported configuration](xkeymacsConfig.reg). It has navigation commands, delete/backspace on the home-row, new-line C-j, and kill/yank stuff. Make sure to add C-o as well. It's the useful insert newline before current one. 
 
 Also, use the keyboard map tool (I believe referenced in the starting pages of Startup Class) to switch the left-Control and Caps Lock keys. Prevents emacs pinky. It's also possible to use the below regedit hack:
 ```
