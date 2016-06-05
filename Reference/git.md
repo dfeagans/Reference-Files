@@ -98,15 +98,15 @@ Git commits a snapshot of everything you staged on the index. This allows branch
 Git does lots of things locally since you clone the entire repo. This makes `git diff` and `git log` work really quickly because it's not querying a database for files and comparing them.
 
 **Files have three states in GIT: Modified,Staged,Committed:**
-     Modified - File is modified and not currently tracked by git. The change won't be stored in gits snapshot of the files.
-     Staged - The file is modified and will be tracked by git on the next commit, thus permanently saving the changes.
-     Comitted - The data has been "checked-in" to your local database and the revision is added to the your project's history.
+- **Modified** - File is modified and not currently tracked by git. The change won't be stored in gits snapshot of the files.
+- **Staged** - The file is modified and will be tracked by git on the next commit, thus permanently saving the changes.
+- **Comitted** - The data has been "checked-in" to your local database and the revision is added to the your project's history.
 
 **Git Config File** - There are several config files, a global one for everyone on the computer, a user one specifically for you, and a repo one for each specific repositiory. The more specific configs override the global ones.
-     Setting user.name: git config --global user.name "<firstName> <lastName>"
-     Setting user.email: git config --global user.email <name.lastName@gmail.com>
-     Check Current Config Settings: git config --list
-     Check Individual Config Settings: git config user.name
+- **Setting user.name**: git config --global user.name "<firstName> <lastName>"
+- **Setting user.email**: git config --global user.email <name.lastName@gmail.com>
+- **Check Current Config Settings**: git config --list
+- **Check Individual Config Settings**: git config user.name
 
 **Tracked/Untracked** - Files are always either tracked or untracked. It's not back to not track files, like binaries or reference files. It's kind of like the "continue" in wind-chill. You check which files are tracked with git status. Files can be tracked, modified, but not staged for commit. This allows you to incrementally commit things. It's possible to use a .gitignore file to set rules to never track temporary files, binary files, or other extensions. Just create a text file called ".gitignore" in the directory and add the names of the files you want to ignore, wildcards work. It works with wildcards, so I often put "*~" in there to ignore all the emacs backup files. I also put "node_modules" in there. If I was going to deploy using git, I'd put all the modules in there, but if you manage the modules with npm you can just download them when needed. So ignoring "node_moduels" saves memory/bandwidth.
 
