@@ -162,3 +162,6 @@ Which is then used to control the flow by using the following code: `pricing["VI
 
 ## instanceof ##
 `instanceof` checks if something is an instance of another thing and returns true/false. Example: `resultOfOperation instanceof Error` would be true if something returned an error and then you could handle it.
+
+## prototype ##
+The `ConstructorFunction.prototype._localfunction` uses the prototype keyword to set another method for the `ConstructorFunctio` after the fact. Apparently it's more efficient on memory because it only defines it once and the all the constructed objects reference it. If you define it within the `ConstructiorFunction` it's created individually for each object created by the `ConstructorFunction`.
