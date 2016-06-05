@@ -22,6 +22,9 @@ When hardcoding constants in, use `VARIABLE_NAME_IN_ALL_CAPS`. Example. `CONTROL
 ## Default Values ## 
 A nice practice is to create a `DEFAULT_SETTINGS` variable that's defined ahead of time to set the default value. Then take "settings" in as arguments to a function or command line input later. Using `var settingToUse = settings || DEFAULT_SETTINGS` would define `settingToUse` as `DEFAULT_SETTINGS` if `settings` had no value; meaning the person didn't manually provide the settings at the command line or function call.
 
+## Private Variables ##
+A common style practice is to note private variables by pre-fixing the varaible name with "_". It's purely a style choice though to ease recognition. For example a variable within the function would be called "_exampleVariable".
+
 ## { Style Rule ##
 Always put the { on the same line as the statement to start the habit. If its following an if statement it won't cause any problems being on another line, but if its following a return in a function if you put the { on the next line (like if you were returning a object literal) it wouldn't see it and would return undefined. Therefore, as a habit, always put the { on the same line after the statement.
 
