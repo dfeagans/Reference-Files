@@ -110,3 +110,6 @@ To get the function (F1-F19) keys to work, you have to hold the "fn" button on t
 After installing git, I copied the relevant parts of my .bash_profile and .bashrc (mostly so I could get alias l = ls and the cs function) into a new .bashrc. Then I copied the relevant aliases from my .gitconfig dotfile. BOTH OF THOSE FILES HAD TO BE CREATED IN THE ROOT GIT BASH DIRECTORY, which is `/C/Users/dfeagans`. At the end of the .bashrc, I put a `cd /C/Users/dfeagans/Desktop/Odin`, that means git bash will always start in that folder on my desktop that contians all my projects.
 
 Note that it's possible to call node and npm from within Git bash.
+
+### Snipping Tool ###
+Set up snipping tool such that it's triggered by Ctrl-Shift-S (this is under the typical Windows Properties). Under the Options, turn off the instruction text and the prompt to save before exiting to make everything cleaner. Make sure the "Always copy snips to the clipboard" is checked since I usually immedietely paste into another program.
