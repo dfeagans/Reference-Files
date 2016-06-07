@@ -20,7 +20,8 @@ Built in Tutorial is pulled up using: `M-x help-with-tutorial`
 - `C-x C-f` = find file to open or create. You can type to search for it or use the arrows to navigate around and select it.
 - `C-f C-b` shows all the files you've opened and modified.
 - `C-x b` = lets you quickly switch between the currently opened buffers just by typing it's name. Tab auto-completes like Bash which is very useful.
-- `C-x C-s` = saves current buffer.
+- `C-x C-s` = save current buffer.
+- `C-x C-w` = **save-as** current buffer.
 - `C-x s` = individually prompts to save ALL the buffers that have been modified.
 - `C-x s d` = runs `diff-buffer-with-file` and shows you the modifications you've made before saving. Super useful.
 - `C-x k` lets you select which buffer or window to kill using the typical mini-buffer methods at the bottom (typing or arrow movement).
