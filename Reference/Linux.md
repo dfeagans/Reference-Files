@@ -8,16 +8,16 @@
 - `Ctrl+K` kills everything after the cursor. Let's you paste it.
 - `Ctrl+Y` yanks the cut data on the kill ring; pasting it.
 - `Ctrl+P` brings up previous command / Ctrl+N  brings up previous command.
-- `Ctrl-R` lets you search through all your previously commands
+- `Ctrl-R` lets you search through all your previously used commands.
 - `Ctrl-C` kill whatever's running.
 - `alias`: Lets you change names of commands or batch settings. Instead of typing `cygstart presentation.xls` you can `alias open='cygstart'`, then you can just type `open presentation.xls`.  To check your current lists of aliases, just type: `alias`. To get them to be permanent the alises need to be added to you .bashrc file though.
 - `unalias`: removes aliases from list. If the above example was previously defined, `unalias open` would delete it. 
-- 'command` is used to temporarily ignore aliases: just start the command with `command`. For example my `rm` is aliased to `rm -i`, forcing it to be interactive. If I delete a folder with `rm -r FOLDER`, it's really annoying to confirm all the deletions. Instead I use `command rm -r FOLDER` and it cleanly removes it. In this exmaple, the other way to force it is to use the "-f" option to force it all.
+- `command` is used to temporarily ignore aliases: just start the command with `command`. For example my `rm` is aliased to `rm -i`, forcing it to be interactive. If I delete a folder with `rm -r FOLDER`, it's really annoying to confirm all the deletions. Instead I use `command rm -r FOLDER` and it cleanly removes it. In this exmaple, the other way to force it is to use the "-f" option to force it all.
 - reload .bashrc after making updates: use the `source <full path to .bashrc>` i.e. `source ./.bashrc`.
 
 #### BASH Commands ####
 - `cd` = change directory. If you do it without any arguments it will take you to root. cd - = go back to previous directory.
-- `ls` = list concets. ls -a even shows hidden ones. ls -alrth gives you the entire list with the user rights too.
+- `ls` = list contents. `ls -a` shows hidden files. `ls -alrth` gives you the entire list with the user rights too.
 - `cat filename` = quickly print the file contents to screen, there's something like cat filename > dump.txt that lets you copy the contents to another file.
 - `less` = even better than cat. It doesn't open the entire file (only the page you are looking at). Scroll up with "b" and down with spacebar.
 - `>` = lets you "redirect" everything to a file. Example: env > variables.txt will dump all your environment variables into a text file for grep'ing. "1>" redirects the stdout of the program. "2>"  the stderr. "&>" redirects both stdout and stderr.
