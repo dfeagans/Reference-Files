@@ -29,6 +29,7 @@ In all the shortcuts, `C-t` means `Ctrl+t`
 - `C-t "` = opens menu to change screen tab with up and down arrows. Enter is select.
 - `C-t tab#` = changes to that tab number
 - `C-t C-t` = toggles back to most recent screen tab.
+- `C-t :number <NUMBER>`= lets you renumber the gnu screen tab. Useful for renaming the 0 to something more closer to the 1,2,3 on the number row.
 
 #### SIDE-BY-SIDE ####
 - `C-t S` = creates a horizontal divider
