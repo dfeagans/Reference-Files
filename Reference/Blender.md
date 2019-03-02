@@ -1,6 +1,7 @@
 # General ViewPort Controls #
 - **Tab** = Toggle between Object and Edit mode. Does edit mode for selected object/objects.
 - **New ViewPorts/Multiple Windows** = Put mouse in any corner of the viewport intended to be split (until crosshairs is shown). Click and drag in the direction the split is desired in.
+- **ViewPort Swapping** - Holding Ctrl and clicking in the corner of the window and then dragging that window to another one will swap the contents of the windows.
 - **Eliminating ViewPorts/Multiple Windows** = Right click the split between the windows and do "Join Area," then click the region you want to be coverd up/removed.
 - **Home** = adjusts zoom to show all.
 - **~** = quick view select.
@@ -35,7 +36,6 @@
 - **Ctrl+e** = Edge Features (Also available at top under the "Edge" Button).
 - **Ctrl+f** = Face Features (Also available at top under the "Face" Button).
 - **u** = UV Features (Also available at top under the "UV" Button).
-
 
 # Vertex Specific Controls #
 - **Alt-m** = Combine vertices (provides options for combine to first, to last, to middle, collapse multiples.
