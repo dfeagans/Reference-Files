@@ -65,5 +65,5 @@
   - Display Tab -> Stretch = shows you how much the texture is stretched on each face (and likely where you need to seam more).
   - Sync = syncs your selection between the mesh viewport and the UV editor viewport so you can see where the unwrapped object is on your actual mesh.
   
- - **Texture Painting**
+ # Texture Painting #
   - Start with smart UV project because you aren't putting an image on the mesh surface. You'll be painting on it and create the image effectively live, so the splits don't matter. It's mapped correct and just locked.
