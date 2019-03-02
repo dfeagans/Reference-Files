@@ -1,4 +1,4 @@
-#General ViewPort Controls#
+# General ViewPort Controls #
 **Tab** = Toggle between Object and Edit mode. Does edit mode for selected object/objects.
 **New ViewPorts/Multiple Windows** = Put mouse in any corner of the viewport intended to be split (until crosshairs is shown). Click and drag in the direction the split is desired in.
 **Eliminating ViewPorts/Multiple Windows** = Right click the split between the windows and do "Join Area," then click the region you want to be coverd up/removed.
