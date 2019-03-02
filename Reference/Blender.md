@@ -11,7 +11,7 @@
 - **Shift+i** = Inverts selection.
 - **Infinite Screen** = remember the mouse will rollover from edge to edge so you can continue scaling for example.
 - **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
-
+- **Shift+a** = Adds mesh primitives at the 3d Cursor.
 
 # Edit Mode #
 - **1,2,3** = Selection limits vertices, edges, faces.
@@ -21,7 +21,6 @@
 - **t** = Hide/Shoes tools on the left
 - **h** = hide selected.
 - **alt+h** = show selected.
-
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
 - **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
 - **s** = scale. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
@@ -34,8 +33,8 @@
 - **i** = inserts face inboard.
 - **Shift+s** = Snap to Menu. Can snap cursor to objects or objects to cursor.
 - **Ctrl+e** = Edge Features (Also available at top under the "Edge" Button).
-**Ctrl+f** = Face Features (Also available at top under the "Face" Button).
-**u** = UV Features (Also available at top under the "UV" Button).
+- **Ctrl+f** = Face Features (Also available at top under the "Face" Button).
+- **u** = UV Features (Also available at top under the "UV" Button).
 
 
 # Vertex Specific Controls #
@@ -52,8 +51,10 @@
 - **Shift+e** = crease adjustment. Sharpens and makes line red. Creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
 
 # UV Unwrapping #
+- Before unwrapping anything you have to be in edit mode for the object and select the faces you want to unwrap, likely by hitting a to select all of them.
 - **Smart UV Project** = automated UV Unwrapping. Bring up using "u" shortcut.
 - **Ctrl+e -> Mark Seam** = Manually define a seam (in red) along that selected edge.
+- **Clear Seam** = Obviously stops the edge from being a seam for unwrap.
 - **Unwrap** = Unwrap Mesh using defined seams. Bring up using "u" shortcut.
 - **General UV Editor Notes**
   - Middle Click = pan
@@ -63,3 +64,6 @@
   - l = still selects all linked geometry.
   - Display Tab -> Stretch = shows you how much the texture is stretched on each face (and likely where you need to seam more).
   - Sync = syncs your selection between the mesh viewport and the UV editor viewport so you can see where the unwrapped object is on your actual mesh.
+  
+ - **Texture Painting**
+  - Start with smart UV project because you aren't putting an image on the mesh surface. You'll be painting on it and create the image effectively live, so the splits don't matter. It's mapped correct and just locked.
