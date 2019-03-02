@@ -13,12 +13,14 @@
 **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
 
 
-# Edit Mode#
+# Edit Mode #
 **1,2,3** = Selection limits vertices, edges, faces.
 **w** = toggles the selection method: Select, Box, Circle, Lasso.
 **Show Whole Scene Transparent/XRay Button** = limits selection to what's visible or all. Button in the top right of viewport.
 **n** = Hide/Shows properties of current element (on the right of viewport).
 **t** = Hide/Shoes tools on the left
+**h** = hide selected.
+**alt+h** = show selected.
 
 **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
 **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
@@ -27,10 +29,14 @@
 **.** = shows menu to select where to rotate about.
 **Scroll Wheel During Edit** = Adjusts Area of Effect.
 **o** = Toggles On/Off proportional editing.
+**Limit Regions Affected By Proportional Modelling** = Hidden geometry won't be affected by proportional edits (h, alt+h).
+**e** = extrude in direction.
+**i** = inserts face inboard.
 **Shift+s** = Snap to Menu. Can snap cursor to objects or objects to cursor.
 **Ctrl+e** = Edge Features (Also available at top under the "Edge" Button).
 **Ctrl+f** = Face Features (Also available at top under the "Face" Button).
 **u** = UV Features (Also available at top under the "UV" Button).
+
 
 # Vertex Specific Controls #
 **Alt-m** = Combine vertices (provides options for combine to first, to last, to middle, collapse multiples.
@@ -38,7 +44,22 @@
 
 # Edge-Specific Controls #
 **Ctrl+r** = Loop Cut / Sub-Divide. Click once desired orientation is achieved, then adjust position and click to accept. 
+  - **Scroll Wheel** - Adjusts number of loop cuts.
   - **e** = choose one specific edge (of the two) to inform the loop cut geometry instead of informing the shape by proportionally based on which edge it's closest to.
   - **f** = toggles which of the edges is being explicitely used to inform the loop cut profile.
 **k** = knife tool. Cuts faces and puts down edges. Manual version of loop-cut... ish.
-**Shift+e** = crease adjustment. Sharpens and makes line red.
+**f** = makes face, effectively merges faces if you select multiple.
+**Shift+e** = crease adjustment. Sharpens and makes line red. Creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
+
+# UV Unwrapping #
+**Smart UV Project** = automated UV Unwrapping. Bring up using "u" shortcut.
+**Ctrl+e -> Mark Seam** = Manually define a seam (in red) along that selected edge.
+**Unwrap** = Unwrap Mesh using defined seams. Bring up using "u" shortcut.
+**General UV Editor Notes**
+  - Middle Click = pan
+  - Scroll = zoom in and out.
+  - a = still selects all.
+  - g = still moves around.
+  - l = still selects all linked geometry.
+  - Display Tab -> Stretch = shows you how much the texture is stretched on each face (and likely where you need to seam more).
+  - Sync = syncs your selection between the mesh viewport and the UV editor viewport so you can see where the unwrapped object is on your actual mesh.
