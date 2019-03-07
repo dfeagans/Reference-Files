@@ -79,3 +79,4 @@
 
 # Surfacing #
 **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Edge Collapse to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
+**Background Images** - just drag the image into the Blender window. It'll add them as an Empty object that you can then modify.
