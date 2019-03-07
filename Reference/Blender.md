@@ -27,6 +27,7 @@
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
 - **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
 - **s** = scale. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
+- **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
 - **r** = Rotates object. Amount back be typed into properties explicitely. X,Y,Z to contrain rotation works.
 - **.** = shows menu to select where to rotate about.
 - **Scroll Wheel During Edit** = Adjusts Area of Effect.
