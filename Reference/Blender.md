@@ -44,7 +44,7 @@
 - **Mesh > Vertices > Remove Doubles** = cleans up overlap vertices (often created while simplifying edges with gg moves).
 
 # Edge-Specific Controls #
-- **Ctrl+r** = Loop Cut / Sub-Divide. Click once desired orientation is achieved, then adjust position and click to accept. 
+- **Ctrl+r** = Loop Cut / Sub-Divide. Click once desired orientation is achieved, then adjust position and click to accept. Works on both edges and faces.
   - **Scroll Wheel** - Adjusts number of loop cuts.
   - **e** = choose one specific edge (of the two) to inform the loop cut geometry instead of informing the shape by proportionally based on which edge it's closest to.
   - **f** = toggles which of the edges is being explicitely used to inform the loop cut profile.
