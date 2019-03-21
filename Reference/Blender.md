@@ -29,6 +29,7 @@
 - **Shift+d** = duplicate element.
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
 - **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
+- **Snap** = extremely useful with snap to face. If you turn on "use_snap_project", which is "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
 - **s** = scale. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
 - **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
 - **r** = Rotates object. Amount back be typed into properties explicitely. X,Y,Z to contrain rotation works.
@@ -42,6 +43,7 @@
 - **Ctrl+e** = Edge Features (Also available at top under the "Edge" Button).
 - **Ctrl+f** = Face Features (Also available at top under the "Face" Button).
 - **u** = UV Features (Also available at top under the "UV" Button).
+- **Shift+r** = Redo. Nice for building evenly spaced grids.
 
 # Vertex Specific Controls #
 - **Alt-m** = Combine vertices (provides options for combine to first, to last, to middle, collapse multiples.
