@@ -78,25 +78,25 @@
   - Start with smart UV project because you aren't putting an image on the mesh surface. You'll be painting on it and create the image effectively live, so the splits don't matter. It's mapped correct and just locked.
 
 # Sculpt Mode #
-**f** = adjust size of Sculpting Brush.
-**Shift+f** = adjust strenght of the Sculpting Brush. 
-**ctrl** = alternates the effect of the sculpting brush. If adding a bulge, holding ctrl while using the brush will create dent (or vice versa).
-**shift** = while in a brush mode, regardless of it's type, changes the brush temporarlity to smooth.
-**Dyntopo** - can be toggled in the top menus, but the true settings are in the "Active Tool and Workspace Settings" pane in the "Properties" window on the RH-side (by default). That's where you can change detail size (and other useful more granular settings).
+- **f** = adjust size of Sculpting Brush.
+- **Shift+f** = adjust strenght of the Sculpting Brush. 
+- **ctrl** = alternates the effect of the sculpting brush. If adding a bulge, holding ctrl while using the brush will create dent (or vice versa).
+- **shift** = while in a brush mode, regardless of it's type, changes the brush temporarlity to smooth.
+- **Dyntopo** - can be toggled in the top menus, but the true settings are in the "Active Tool and Workspace Settings" pane in the "Properties" window on the RH-side (by default). That's where you can change detail size (and other useful more granular settings).
 
 # Surfacing #
-**Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Edge Collapse to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
-**Background Images** - Shift-A > Image > Background. Another simple way to do it is to just drag the image into the Blender window. It'll add them as an Empty object that you can then modify. To control whether the image is shown on the front or back of whatever view plane it was on, go into the Object Data tab in Properties and select the appropriuate "Side". That lets you put the front and back blueprint on the front plane and seeing the one that's relevant to the current view.
-**Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth."
-**Bevel** - Good way to reinforce edges is by adding a Bevel with Ctrl-b. Setting segments to 2 puts edge loops on either side of your original curve.
-**Merging Vertices** - It's sometimes useful to do minor retopogizing using 'gg' and sliding vertices on top of each other. Then you can select all and do "Vertex" > "Remove Double Vertex" at the top to remove the duplicate. Another option is to do that Double Vertex Removal automatically by turning on the "AutoMerge Editing" in the Mesh Options at the very top right of the Blender 2.8 window. The former is likely the most useful for intermittent usage since people usually turn off "AutoMerge Editing" since it can cause issues otherwise.
-**Recalculate Normals** - If visibilities ever get screwy (likely from making floating faces while editing a body, you can recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8. Otherwise, shortcut for it is *shift+n*.
+- **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Edge Collapse to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
+- **Background Images** - Shift-A > Image > Background. Another simple way to do it is to just drag the image into the Blender window. It'll add them as an Empty object that you can then modify. To control whether the image is shown on the front or back of whatever view plane it was on, go into the Object Data tab in Properties and select the appropriuate "Side". That lets you put the front and back blueprint on the front plane and seeing the one that's relevant to the current view.
+- **Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth."
+- **Bevel** - Good way to reinforce edges is by adding a Bevel with Ctrl-b. Setting segments to 2 puts edge loops on either side of your original curve.
+- **Merging Vertices** - It's sometimes useful to do minor retopogizing using 'gg' and sliding vertices on top of each other. Then you can select all and do "Vertex" > "Remove Double Vertex" at the top to remove the duplicate. Another option is to do that Double Vertex Removal automatically by turning on the "AutoMerge Editing" in the Mesh Options at the very top right of the Blender 2.8 window. The former is likely the most useful for intermittent usage since people usually turn off "AutoMerge Editing" since it can cause issues otherwise.
+- **Recalculate Normals** - If visibilities ever get screwy (likely from making floating faces while editing a body, you can recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8. Otherwise, shortcut for it is *shift+n*.
 Mesh -> Normals -> Recalculate Outside. 
 
 # Object Manipulations #
-**Join** - It's possible to joing together two seperate objects using ctrl-j.
-**Seperate** - While in edit mode you can select the region you want to seperate and use "p" to break it out into a seperate object.
-**Append** - If there's an object in another Blender file you want, you can add it to your current file using File > Append.
+- **Join** - It's possible to joing together two seperate objects using ctrl-j.
+- **Seperate** - While in edit mode you can select the region you want to seperate and use "p" to break it out into a seperate object.
+- **Append** - If there's an object in another Blender file you want, you can add it to your current file using File > Append.
 
 # Viewing PLY Colors in Blender 2.8 #
 Blender 2.8 removed the normal way for seeing Vertex Colors of ply files, adding a new material and checking the "Vertex Color Paint" box under Material > Options. In Blender 2.8, the easiest way to do it is to plug the Vertex Colors in the Color input of the shader. It's possible to do that by adding a meterial to the object and then do Shift-a > Input/Vertex Colors/Col and wire those colors into the Shader.
