@@ -23,12 +23,13 @@
 - **Show Whole Scene Transparent/XRay Button** = limits selection to what's visible or all. Button in the top right of viewport.
 - **n** = Hide/Shows properties of current element (on the right of viewport).
 - **t** = Hide/Shoes tools on the left
-- **h** = hide selected.
+- **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful.
 - **alt+h** = show selected.
 - **x** = delete. Works everyplace.
 - **Shift+d** = duplicate element.
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
 - **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
+= **c** - Constrains the movement of edge slide at the angle. Useful for allowing you to effectively edge slide extend.
 - **Snap** = extremely useful with snap to face. If you turn on "use_snap_project", which is "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
 - **s** = scale. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
 - **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
