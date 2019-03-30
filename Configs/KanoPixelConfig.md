@@ -17,6 +17,12 @@
 - You can then connect the Pixel to your normal Wifi network by running: `saveWifiConf(ssid, passord)`, then `reset()`. I could NOT get it connected to the 5GHz, but connecting it to my 2.4GHz channel still put it on the same network obviously.
 - If at any time you want to return to the state where it makes it's own network (in case you aren't around a WIFI network), you can return it to that state (Blue Screen) by holding down the two red buttons and turning it off/on.
 
+## Putting it to Work ##
+- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/
+- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/pixel-kit
+
+## (UNREAD) Arduino Integration ##
+- Full Feature List of ESP32 and Arduino Details: https://learn.sparkfun.com/tutorials/esp32-thing-hookup-guide
 - Someone used the Kano Pixel with the Arduino IDE and resolved:
   - A0 is the knob - you get values from 4095 to 0.
   - The buttons look like they are active low...(I just used the Arduino example, to test this)
