@@ -24,7 +24,8 @@
 - **n** = Hide/Shows properties of current element (on the right of viewport).
 - **t** = Hide/Shoes tools on the left
 - **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful.
-- **alt+h** = show selected.
+- **alt+h** = show all temporarily hidden items.
+- **Shift+h** = hide all but selected.
 - **x** = delete. Works everyplace.
 - **Shift+d** = duplicate element.
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
@@ -99,4 +100,4 @@ Mesh -> Normals -> Recalculate Outside.
 - **Append** - If there's an object in another Blender file you want, you can add it to your current file using File > Append.
 
 # Viewing PLY Colors in Blender 2.8 #
-Blender 2.8 removed the normal way for seeing Vertex Colors of ply files, adding a new material and checking the "Vertex Color Paint" box under Material > Options. In Blender 2.8, the easiest way to do it is to plug the Vertex Colors in the Color input of the shader. It's possible to do that by adding a meterial to the object and then do Shift-a > Input/Vertex Colors/Col and wire those colors into the Shader.
+Blender 2.8 removed the normal way for seeing Vertex Colors of ply files: adding a new material and checking the "Vertex Color Paint" box under Material > Options. In Blender 2.8, the easiest way to do it is to plug the Vertex Colors in the Color input of the shader. It's possible to do that by adding a meterial to the object and then do Shift-a > Input/Vertex Colors/Col and wire those colors into the Shader.
