@@ -1,18 +1,24 @@
+# FIND PLACE FOR OR DELETE #
+- **alt+left click** - loop selection. In Edit Mode lets you select entire LL chain or faces or edges.
+
 # Customizations Employed #
 - **Turn Off Auto Inspection** - Edit > User Preferences > Navigation > Uncheck Auto Perspective
 
 # General ViewPort Controls #
 - **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
+- **Floor Unit Detail** - By Default, with Inch Units the Floor grid lines are spaced 1 FOOT apart. To change to inch lines, you adjust the scale via the "Viewport Overlays" drop-down in the top right to 1/12.
 - **New ViewPorts/Multiple Windows** = Put mouse in any corner of the viewport intended to be split (until crosshairs is shown). Click and drag in the direction the split is desired in.
 - **ViewPort Swapping** - Holding Ctrl and clicking in the corner of the window and then dragging that window to another one will swap the contents of the windows.
 - **Eliminating ViewPorts/Multiple Windows** = Right click the split between the windows and do "Join Area," then click the region you want to be coverd up/removed.
 - **Home** = adjusts zoom to show all.
 - **~** = quick view select.
+- **Alt+Middle Mouse** = Hold Alt and Drag Direction w/ Middle Mouse to align view that way.
+- **Num-pad** = toggles to pre-programmed views.
 - **Tab** = Toggle between Object and Edit mode. Does edit mode for selected object/objects.
 - **Shift+a** = Adds mesh primitives at the 3d Cursor.
 - **n** = Hide/Shows properties of current element (on the right of viewport). Works in and out of Edit Mode, so on macro object level to most micro vertex level.
 - **t** = Hide/Shoes tools on the left. Works in and out of Edit Mode.
-- **Show Whole Scene Transparent/XRay Button** = limits selection to what's visible or all. Button in the top right of viewport.
+- **Alt-z** = X-ray. Show Whole Scene Transparent. Limits selection to what's visible or all. Also, button in the top right of viewport.
 - **Infinite Screen** = remember the mouse will rollover from edge to edge so you can continue scaling for example.
 
 # Selection #
@@ -26,6 +32,7 @@
 - **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful.
 - **alt+h** = show all temporarily hidden items.
 - **Shift+h** = hide all but selected.
+- **Clipping** = you can adjust where your view gets clipped by hitting n to get the properties side bar then hit the View tab and change 'Clip Start'
 
 # Common Commands (Edit and Object Mode) #
 - **l** = selects linked elements. Works for vvertices, edges, surfaces. etc. Even works in UV editing.
@@ -97,7 +104,7 @@
 # Surfacing #
 - **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Delete > Edge Collapse in the top menu (just hitting 'x' and then Edge Collapse is easier to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
 - **Background Images** - Shift-A > Image > Background. Another simple way to do it is to just drag the image into the Blender window. It'll add them as an Empty object that you can then modify. To control whether the image is shown on the front or back of whatever view plane it was on, go into the Object Data tab in Properties and select the appropriuate "Side". That lets you put the front and back blueprint on the front plane and seeing the one that's relevant to the current view.
-- **Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth."
+- **Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth." It's also available if you just right click over the object.
 - **Bevel** - Good way to reinforce edges is by adding a Bevel with Ctrl-b. Setting segments to 2 puts edge loops on either side of your original curve.
 - **Merging Vertices** - It's sometimes useful to do minor retopogizing using 'gg' and sliding vertices on top of each other. Then you can select all and do "Vertex" > "Remove Double Vertex" at the top to remove the duplicate. Another option is to do that Double Vertex Removal automatically by turning on the "AutoMerge Editing" in the Mesh Options at the very top right of the Blender 2.8 window. The former is likely the most useful for intermittent usage since people usually turn off "AutoMerge Editing" since it can cause issues otherwise.
 - **Recalculate Normals** - If visibilities ever get screwy (likely from making floating faces while editing a body, you can recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8. Otherwise, shortcut for it is *shift+n*.
