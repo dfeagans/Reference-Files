@@ -2,62 +2,71 @@
 - **Turn Off Auto Inspection** - Edit > User Preferences > Navigation > Uncheck Auto Perspective
 
 # General ViewPort Controls #
-- **Tab** = Toggle between Object and Edit mode. Does edit mode for selected object/objects.
+- **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
 - **New ViewPorts/Multiple Windows** = Put mouse in any corner of the viewport intended to be split (until crosshairs is shown). Click and drag in the direction the split is desired in.
 - **ViewPort Swapping** - Holding Ctrl and clicking in the corner of the window and then dragging that window to another one will swap the contents of the windows.
 - **Eliminating ViewPorts/Multiple Windows** = Right click the split between the windows and do "Join Area," then click the region you want to be coverd up/removed.
 - **Home** = adjusts zoom to show all.
 - **~** = quick view select.
-- **l** = selects linked vertices. Works for edges and surfaces too. Even works in UV editing.
-- **a** = selects all.
-- **c** = Circle select. Scroll wheel to adjust size. Right click to exit with select.
-- **Alt+a** = deselects all.
-- **Shift+i** = Inverts selection.
-- **Infinite Screen** = remember the mouse will rollover from edge to edge so you can continue scaling for example.
-- **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
+- **Tab** = Toggle between Object and Edit mode. Does edit mode for selected object/objects.
 - **Shift+a** = Adds mesh primitives at the 3d Cursor.
-
-# Edit Mode #
-- **1,2,3** = Selection limits vertices, edges, faces.
-- **w** = toggles the selection method: Select, Box, Circle, Lasso.
+- **n** = Hide/Shows properties of current element (on the right of viewport). Works in and out of Edit Mode, so on macro object level to most micro vertex level.
+- **t** = Hide/Shoes tools on the left. Works in and out of Edit Mode.
 - **Show Whole Scene Transparent/XRay Button** = limits selection to what's visible or all. Button in the top right of viewport.
-- **n** = Hide/Shows properties of current element (on the right of viewport).
-- **t** = Hide/Shoes tools on the left
+- **Infinite Screen** = remember the mouse will rollover from edge to edge so you can continue scaling for example.
+
+# Selection #
+- **a** = selects all.
+- **w** = toggles the selection method: Select, Box, Circle, Lasso. This works in and out of Edit Mode.
+- **c** = Circle select. Scroll wheel to adjust size. Right click to exit with select. This works in and out of Edit Mode.
+- **Alt+a** = deselects all.
+- **Ctrl+i** = Inverts selection.
+
+# Visibility #
 - **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful.
 - **alt+h** = show all temporarily hidden items.
 - **Shift+h** = hide all but selected.
-- **x** = delete. Works everyplace.
-- **Shift+d** = duplicate element.
+
+# Common Commands (Edit and Object Mode) #
+- **l** = selects linked elements. Works for vvertices, edges, surfaces. etc. Even works in UV editing.
+- **x** = deletes current selection.
+- **Shift+d** = duplicate element. Common in every mode.
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
-- **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
-= **c** - Constrains the movement of edge slide at the angle. Useful for allowing you to effectively edge slide extend.
-- **Snap** = extremely useful with snap to face. If you turn on "use_snap_project", which is "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
-- **s** = scale. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
-- **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
+- **s** = Scale selection. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
 - **r** = Rotates object. Amount back be typed into properties explicitely. X,Y,Z to contrain rotation works.
-- **.** = shows menu to select where to rotate about.
+- **.** = shows menu to select where to rotate/scale/manipulate about. This is the quick select of the "Pivot Point" drop down at the top of the window. Active element is very useful because then the operation will occur about that element. It's just the last element you select, marked in white. So if you select a cloud of vertices, you can shift de-select a point and reselect it to make it white/active.
+- **Shift** - while moving or manipulating anything holding shift makes the movements smaller/more precise.
+- **Shift+s** = Snap-To Menu. Can snap cursor to objects or objects to cursor.
+- **Shift+r** = Redo. Nice for building evenly spaced grids while in edit mode (for example, after extruding an edge), or to make evenly spaced objects (for example, after making a duplicate object to the side of the original).
+
+# Edit Mode Specific Commands #
+- **1,2,3** = Selection limits vertices, edges, faces.
+- **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
+- **c** - Constrains the movement of edge slide at the angle. Useful for allowing you to effectively edge slide extend using gg or e > drag inboard a bit > c > then drag outboard to extend.
+- **Snap** = extremely useful with snap vertices to faces. If you turn on "use_snap_project", which is "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
+- **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
+- **o** = Toggles On/Off proportional editing. There are different types.
 - **Scroll Wheel During Edit** = Adjusts Area of Effect.
-- **o** = Toggles On/Off proportional editing.
-- **Limit Regions Affected By Proportional Modelling** = Hidden geometry won't be affected by proportional edits (h, alt+h).
+- **Limit Regions Affected By Proportional Modelling** = Note hidden geometry won't be affected by proportional edits (h, alt+h).
 - **e** = extrude in direction.
 - **i** = inserts face inboard.
-- **Shift+s** = Snap to Menu. Can snap cursor to objects or objects to cursor.
 - **Ctrl+e** = Edge Features (Also available at top under the "Edge" Button).
 - **Ctrl+f** = Face Features (Also available at top under the "Face" Button).
 - **u** = UV Features (Also available at top under the "UV" Button).
-- **Shift+r** = Redo. Nice for building evenly spaced grids.
 
 # Vertex Specific Controls #
 - **Alt-m** = Combine vertices (provides options for combine to first, to last, to middle, collapse multiples.
-- **Mesh > Vertices > Remove Doubles** = cleans up overlap vertices (often created while simplifying edges with gg moves).
+- **Alt-m > By Distance** = removes overlapping vertices from SELECTION (often created while simplifying edges with gg moves). Rememeber that it removes them from selection, so often start by hitting 'a' first. Previously, in Blender 2.79 it was Mesh > Vertices > Remove Doubles.
+  - Alternate Method 1 =  Mesh > Clean-Up > Merge By Distance at the top of window.
+  - Alternate Method 2 = Right Click > Merge Vertices > By Distance.
 
 # Edge-Specific Controls #
-- **Ctrl+r** = Loop Cut / Sub-Divide. Click once desired orientation is achieved, then adjust position and click to accept. Works on both edges and faces.
-  - **Scroll Wheel** - Adjusts number of loop cuts.
+- **Ctrl+r** = Loop Cut / Sub-Divide. Click once desired orientation is achieved, then adjust position and click to accept. Works on both edges and faces. Right clicking places it right in the middle.
+  - **Scroll Wheel** - Adjusts number of loop cuts. Can type a number to dictate number of sub-divides.
   - **e** = choose one specific edge (of the two) to inform the loop cut geometry instead of informing the shape by proportionally based on which edge it's closest to.
   - **f** = toggles which of the edges is being explicitely used to inform the loop cut profile.
 - **k** = knife tool. Cuts faces and puts down edges. Manual version of loop-cut... ish.
-- **f** = makes face, effectively merges faces if you select multiple.
+- **f** = makes edge or face based on the vertex selection (2 = edge, greater than 2 = face). Effectively merges faces if you select multiple faces then hit f.
 - **Shift+e** = crease adjustment. Sharpens and makes line red. Creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
 
 # UV Unwrapping #
@@ -86,7 +95,7 @@
 - **Dyntopo** - can be toggled in the top menus, but the true settings are in the "Active Tool and Workspace Settings" pane in the "Properties" window on the RH-side (by default). That's where you can change detail size (and other useful more granular settings).
 
 # Surfacing #
-- **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Edge Collapse to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
+- **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Delete > Edge Collapse in the top menu (just hitting 'x' and then Edge Collapse is easier to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
 - **Background Images** - Shift-A > Image > Background. Another simple way to do it is to just drag the image into the Blender window. It'll add them as an Empty object that you can then modify. To control whether the image is shown on the front or back of whatever view plane it was on, go into the Object Data tab in Properties and select the appropriuate "Side". That lets you put the front and back blueprint on the front plane and seeing the one that's relevant to the current view.
 - **Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth."
 - **Bevel** - Good way to reinforce edges is by adding a Bevel with Ctrl-b. Setting segments to 2 puts edge loops on either side of your original curve.
