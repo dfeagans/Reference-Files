@@ -28,7 +28,8 @@
 - **Ctrl+i** = Inverts selection.
 
 # Collections and Oultiner Manipulation #
-- **Shift+m** - While in Object mode, if you hit shift-m, it will offer to move those objects to a different or new collection group.
+- **m** - While in Object mode, if you have object/s selected, it will offer to move those objects to a different or new collection group.
+- **Shift+m** - Allows you to make make a link to the selected object in a another collection. Goal being that you could have one object in two different collections if it helped you organize your work.
 - **Restriction Toggles** - The filter symbol in the top right is very useful for showing the "Selectable" button next to each object. Very useful for making an object unselectable when you don't want to snap to it for example.
 - **Parents** - To make one object a parent of the other (so that if the parent moves the child follows for example), you select the child, then the parent, and thhen hit Ctrl-p and then "Object (Keep Transform). It will move the object in the outliner under the parent object. 
 
