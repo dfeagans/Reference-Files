@@ -18,7 +18,6 @@
 - **Shift+a** = Adds mesh primitives at the 3d Cursor.
 - **n** = Hide/Shows properties of current element (on the right of viewport). Works in and out of Edit Mode, so on macro object level to most micro vertex level.
 - **t** = Hide/Shoes tools on the left. Works in and out of Edit Mode.
-- **Alt-z** = X-ray. Show Whole Scene Transparent. Limits selection to what's visible or all. Also, button in the top right of viewport.
 - **Infinite Screen** = remember the mouse will rollover from edge to edge so you can continue scaling for example.
 
 # Selection #
@@ -28,11 +27,21 @@
 - **Alt+a** = deselects all.
 - **Ctrl+i** = Inverts selection.
 
+# Collections and Oultiner Manipulation #
+- **Shift+m** - While in Object mode, if you hit shift-m, it will offer to move those objects to a different or new collection group.
+- **Restriction Toggles** - The filter symbol in the top right is very useful for showing the "Selectable" button next to each object. Very useful for making an object unselectable when you don't want to snap to it for example.
+- **Parents** - To make one object a parent of the other (so that if the parent moves the child follows for example), you select the child, then the parent, and thhen hit Ctrl-p and then "Object (Keep Transform). It will move the object in the outliner under the parent object. 
+
 # Visibility #
 - **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful.
 - **alt+h** = show all temporarily hidden items.
 - **Shift+h** = hide all but selected.
 - **Clipping** = you can adjust where your view gets clipped by hitting n to get the properties side bar then hit the View tab and change 'Clip Start'
+- **z** = View Mode selection wheel. Different presentation of what's in top-right.
+- **Alt-z** = X-ray. Show Whole Scene Transparent. Limits selection to what's visible or all. Also, button in the top right of viewport.
+- **Shift-z** = Wireframe mode toggle.
+- **.** - Focuses selected item on the screen i.e. Adjusts zoom so that selection fills screen. On numpad.
+- **5** - Toggles perspective on/off. On numpad.
 
 # Common Commands (Edit and Object Mode) #
 - **l** = selects linked elements. Works for vvertices, edges, surfaces. etc. Even works in UV editing.
@@ -50,7 +59,7 @@
 - **1,2,3** = Selection limits vertices, edges, faces.
 - **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
 - **c** - Constrains the movement of edge slide at the angle. Useful for allowing you to effectively edge slide extend using gg or e > drag inboard a bit > c > then drag outboard to extend.
-- **Snap** = extremely useful with snap vertices to faces. If you turn on "use_snap_project", which is "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
+- **Snap** = extremely useful with snap vertices to faces in the background (for example when retopologizing a scan). If you hit the magnet button in the top-right, it turns on "use_snap". Furthermore, you can then turn on "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
 - **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
 - **o** = Toggles On/Off proportional editing. There are different types.
 - **Scroll Wheel During Edit** = Adjusts Area of Effect.
@@ -76,6 +85,39 @@
 - **f** = makes edge or face based on the vertex selection (2 = edge, greater than 2 = face). Effectively merges faces if you select multiple faces then hit f.
 - **Shift+e** = crease adjustment. Sharpens and makes line red. Creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
 
+# Surfacing #
+- **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Delete > Edge Collapse in the top menu (just hitting 'x' and then Edge Collapse is easier to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
+- **Background Images** - Shift-A > Image > Background. Another simple way to do it is to just drag the image into the Blender window. It'll add them as an Empty object that you can then modify. To control whether the image is shown on the front or back of whatever view plane it was on, go into the Object Data tab in Properties and select the appropriuate "Side". That lets you put the front and back blueprint on the front plane and seeing the one that's relevant to the current view.
+- **Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth." It's also available if you just right click over the object.
+- **Bevel** - Good way to reinforce edges is by adding a Bevel with Ctrl-b. Setting segments to 2 puts edge loops on either side of your original curve.
+- **Merging Vertices** - It's sometimes useful to do minor retopogizing using 'gg' and sliding vertices on top of each other. Then you can select all and do "Vertex" > "Remove Double Vertex" at the top to remove the duplicate. Another option is to do that Double Vertex Removal automatically by turning on the "AutoMerge Editing" in the Mesh Options at the very top right of the Blender 2.8 window. The former is likely the most useful for intermittent usage since people usually turn off "AutoMerge Editing" since it can cause issues otherwise.
+- **Recalculate Normals** - If visibilities ever get screwy (likely from making floating faces while editing a body, you can recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8. Otherwise, shortcut for it is *shift+n*.
+Mesh -> Normals -> Recalculate Outside. 
+
+# Object Manipulations #
+- **Join** - It's possible to joing together two seperate objects using ctrl-j.
+- **Seperate** - While in edit mode you can select the region you want to seperate and use "p" to break it out into a seperate object.
+- **Append** - If there's an object in another Blender file you want, you can add it to your current file using File > Append.
+
+# Sculpt Mode #
+- **f** = adjust size of Sculpting Brush.
+- **Shift+f** = adjust strength of the Sculpting Brush. 
+- **ctrl** = alternates the effect of the sculpting brush. If adding a bulge, holding ctrl while using the brush will create dent (or vice versa).
+- **shift** = while in a brush mode, regardless of it's type, changes the brush temporarlity to smooth.
+- **Dyntopo** - can be toggled in the top menus, but the true settings are in the "Active Tool and Workspace Settings" pane in the "Properties" window on the RH-side (by default). That's where you can change detail size (and other useful more granular settings).
+- **Symmetry** - The viewport has an X,Y, and Z button in the top-right that indicates what symmetry is being maintained throughout sculpting.
+
+# Camera Manipulations #
+- **0** - on numberpad shows you what the camera's seeing. You can select the camera frame and do g to move the camera around. If you want to zoom, hit g and then the middle mouse buttin and then move mouse up and down. Another option for reproducing that behaviour is to hit n and under the View tab, check the "Lock Camera to View." Then as you fly around the camera moves with you.
+- **Ctrl+Alt+0** - snaps the currently selected camera to your current view. Super useful, just make sure you have the camera selected or you'll be confused.
+
+# Rendering #
+- **F12** - renders current scene.
+- **F11** - brings up previous render.
+- **Shift-s** - save render menu.
+- **Exposure Judgement** - Under the Render Properties list the bottom-most group is "Color Management", turning the View Transform section to "False Color." Appropriately exposed elements are gray-ish. Decrease the lighting strength until the critical elements are gray.
+- **De-Noiser** - To use the new Intel AI denoiser, go to the Layer tab in the properties and check the "Denoising Data" option, then do another render, and go to the Compositor tab (which is everything that happens after render is finished). Sometimes you'll have to check "Use Nodes" to get things to show up. Then you can wire in a "Denoiser" node that wires the Noisy Image, Denoising Normal, and Denoising Albeto into it and then then the result into the Composite node. This is referenced here briefly: https://www.youtube.com/watch?v=5lr8QnR5WWU
+
 # UV Unwrapping #
 - Before unwrapping anything you have to be in edit mode for the object and select the faces you want to unwrap, likely by hitting a to select all of them.
 - **Smart UV Project** = automated UV Unwrapping. Bring up using "u" shortcut.
@@ -93,27 +135,6 @@
   
 # Texture Painting #
   - Start with smart UV project because you aren't putting an image on the mesh surface. You'll be painting on it and create the image effectively live, so the splits don't matter. It's mapped correct and just locked.
-
-# Sculpt Mode #
-- **f** = adjust size of Sculpting Brush.
-- **Shift+f** = adjust strenght of the Sculpting Brush. 
-- **ctrl** = alternates the effect of the sculpting brush. If adding a bulge, holding ctrl while using the brush will create dent (or vice versa).
-- **shift** = while in a brush mode, regardless of it's type, changes the brush temporarlity to smooth.
-- **Dyntopo** - can be toggled in the top menus, but the true settings are in the "Active Tool and Workspace Settings" pane in the "Properties" window on the RH-side (by default). That's where you can change detail size (and other useful more granular settings).
-
-# Surfacing #
-- **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Delete > Edge Collapse in the top menu (just hitting 'x' and then Edge Collapse is easier to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
-- **Background Images** - Shift-A > Image > Background. Another simple way to do it is to just drag the image into the Blender window. It'll add them as an Empty object that you can then modify. To control whether the image is shown on the front or back of whatever view plane it was on, go into the Object Data tab in Properties and select the appropriuate "Side". That lets you put the front and back blueprint on the front plane and seeing the one that's relevant to the current view.
-- **Smooth Shading** - Compared to previous versions of Blender, in 2.8 to use Smooth Shading, you select the object and the hit the Object menu at the top and "Shade Smooth." It's also available if you just right click over the object.
-- **Bevel** - Good way to reinforce edges is by adding a Bevel with Ctrl-b. Setting segments to 2 puts edge loops on either side of your original curve.
-- **Merging Vertices** - It's sometimes useful to do minor retopogizing using 'gg' and sliding vertices on top of each other. Then you can select all and do "Vertex" > "Remove Double Vertex" at the top to remove the duplicate. Another option is to do that Double Vertex Removal automatically by turning on the "AutoMerge Editing" in the Mesh Options at the very top right of the Blender 2.8 window. The former is likely the most useful for intermittent usage since people usually turn off "AutoMerge Editing" since it can cause issues otherwise.
-- **Recalculate Normals** - If visibilities ever get screwy (likely from making floating faces while editing a body, you can recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8. Otherwise, shortcut for it is *shift+n*.
-Mesh -> Normals -> Recalculate Outside. 
-
-# Object Manipulations #
-- **Join** - It's possible to joing together two seperate objects using ctrl-j.
-- **Seperate** - While in edit mode you can select the region you want to seperate and use "p" to break it out into a seperate object.
-- **Append** - If there's an object in another Blender file you want, you can add it to your current file using File > Append.
 
 # Viewing PLY Colors in Blender 2.8 #
 Blender 2.8 removed the normal way for seeing Vertex Colors of ply files: adding a new material and checking the "Vertex Color Paint" box under Material > Options. In Blender 2.8, the easiest way to do it is to plug the Vertex Colors in the Color input of the shader. It's possible to do that by adding a meterial to the object and then do Shift-a > Input/Vertex Colors/Col and wire those colors into the Shader.
