@@ -85,7 +85,7 @@
   - **f** = toggles which of the edges is being explicitely used to inform the loop cut profile.
 - **k** = knife tool. Cuts faces and puts down edges. Manual version of loop-cut... ish.
 - **f** = makes edge or face based on the vertex selection (2 = edge, greater than 2 = face). Effectively merges faces if you select multiple faces then hit f.
-- **Shift+e** = crease adjustment. Sharpens and makes line red. Creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
+- **Shift+e** = crease adjustment. Sharpens and makes line red. Avoid unless it's a really simple quick object. Better off using bevel probably. Reason's being: 1) Crease is Blender specific. So if you use it you can't export it and pass cleanly to other programs the way a pre-sub-d's mesh can be (they'd then apply sub-d in their program). 2) creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
 
 # Surfacing #
 - **Creating First Curves** - Shift-a > Plane, then edit the plane and do Mesh > Delete > Edge Collapse in the top menu (just hitting 'x' and then Edge Collapse is easier to get the plane to collapse to a single Vertex. Then it's possible to extrude it to create edges. Other option is to Shift-a anymesh object, Edit-Mode it, delete everything out of the object and then use shift + right click to start adding points. If you have a vertex selected it will continue to add them in a edge chain. If you deselect everything it will just add a vertex by itself.
