@@ -58,6 +58,7 @@
 
 # Edit Mode Specific Commands #
 - **1,2,3** = Selection limits vertices, edges, faces.
+- **Ctrl+x** = dissolve vertex, edge, or face, instead of normal x = delete.
 - **gg** = Grab, with Slide. Either Edge Slide or Vertex Slide depending on selection mode. Primary use is redistributing things - intelligently. Otherwise, Useful to simplify edges and then use Remove Doubles.
 - **c** - Constrains the movement of edge slide at the angle. Useful for allowing you to effectively edge slide extend using gg or e > drag inboard a bit > c > then drag outboard to extend.
 - **Snap** = extremely useful with snap vertices to faces in the background (for example when retopologizing a scan). If you hit the magnet button in the top-right, it turns on "use_snap". Furthermore, you can then turn on "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
