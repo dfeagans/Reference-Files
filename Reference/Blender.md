@@ -2,7 +2,8 @@
 - **alt+left click** - loop selection. In Edit Mode lets you select entire LL chain or faces or edges.
 
 # Customizations Employed #
-- **Turn Off Auto Inspection** - Edit > User Preferences > Navigation > Uncheck Auto Perspective
+- **Turn Off Auto Perspectiive** - Edit > User Preferences > Navigation > Uncheck Auto Perspective
+- **Loops Tools** - Just a ton of really useful tools, shown by right clicking in Edit mode, or by hitting n > Edit.
 
 # General ViewPort Controls #
 - **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
