@@ -51,7 +51,7 @@
 - **x** = deletes current selection.
 - **Shift+d** = duplicate element. Common in every mode.
 - **g** = Grab. Move in view. Then pressing X,Y,Z moves only in that direction (otherwise in view plane). **Middle clicking hot swaps the axis lock to whichever way you've dragged throughout typical operations**
-- **s** = Scale selection. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z.
+- **s** = Scale selection. Can specify axis using X,Y,Z as expected and can avoid scaling along axis with Shift+X,Y,Z. Nice hack to put elements at same x coordinate is selecting them both and scaling only in x then hitting 0. Just make sure the "Pivot Point" is set to active element and the point you don't want to move is the last one you select.
 - **r** = Rotates object. Amount back be typed into properties explicitely. X,Y,Z to contrain rotation works.
 - **.** = shows menu to select where to rotate/scale/manipulate about. This is the quick select of the "Pivot Point" drop down at the top of the window. Active element is very useful because then the operation will occur about that element. It's just the last element you select, marked in white. So if you select a cloud of vertices, you can shift de-select a point and reselect it to make it white/active.
 - **Shift** - while moving or manipulating anything holding shift makes the movements smaller/more precise.
