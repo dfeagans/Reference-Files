@@ -36,7 +36,7 @@
 - **Parents** - To make one object a parent of the other (so that if the parent moves the child follows for example), you select the child, then the parent, and thhen hit Ctrl-p and then "Object (Keep Transform). It will move the object in the outliner under the parent object. 
 
 # Visibility #
-- **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful.
+- **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful. If you are propoprtionally edititing a group of vertices hidden vertices won't move even.
 - **alt+h** = show all temporarily hidden items.
 - **Shift+h** = hide all but selected.
 - **Clipping** = you can adjust where your view gets clipped by hitting n to get the properties side bar then hit the View tab and change 'Clip Start'
@@ -65,7 +65,7 @@
 - **c** - Constrains the movement of edge slide at the angle. Useful for allowing you to effectively edge slide extend using gg or e > drag inboard a bit > c > then drag outboard to extend.
 - **Snap** = extremely useful with snap vertices to faces in the background (for example when retopologizing a scan). If you hit the magnet button in the top-right, it turns on "use_snap". Furthermore, you can then turn on "Project Individual Elements" in Blender 2.8 you can select a bunch of vertices and move them and they'll project along the view direction onto whatever face is back there. Useful for getting a bunch of vertices snapped quickly by selecting them, hitting "g", and immedietely hitting Enter.
 - **Alts+s** = Scale along normals. When used on faces effectively moves face long normal of the face.
-- **o** = Toggles On/Off proportional editing. There are different types.
+- **o** = Toggles On/Off proportional editing. There are different types. Remember that hidden elements aren't effected by proportional edits.
 - **Scroll Wheel During Edit** = Adjusts Area of Effect.
 - **Limit Regions Affected By Proportional Modelling** = Note hidden geometry won't be affected by proportional edits (h, alt+h).
 - **e** = extrude in direction.
@@ -85,7 +85,7 @@
   - **Scroll Wheel** - Adjusts number of loop cuts. Can type a number to dictate number of sub-divides.
   - **e** = choose one specific edge (of the two) to inform the loop cut geometry instead of informing the shape by proportionally based on which edge it's closest to.
   - **f** = toggles which of the edges is being explicitely used to inform the loop cut profile.
-- **k** = knife tool. Cuts faces and puts down edges. Manual version of loop-cut... ish.
+- **k** = knife tool. Cuts faces and puts down edges. Manual version of loop-cut... ish. Hitting "c" while in this mode "constrains" the tool to certain angles (vertical, 45°, and horizontal).
 - **f** = makes edge or face based on the vertex selection (2 = edge, greater than 2 = face). Effectively merges faces if you select multiple faces then hit f.
 - **Shift+e** = crease adjustment. Sharpens and makes line red. Avoid unless it's a really simple quick object. Better off using bevel probably. Reason's being: 1) Crease is Blender specific. So if you use it you can't export it and pass cleanly to other programs the way a pre-sub-d's mesh can be (they'd then apply sub-d in their program). 2) creases use the length of the edges to inform, so if the edges are different lengths extending away from the actual break you are trying to sharpen the sharpness will vary unintentionaly.
 
