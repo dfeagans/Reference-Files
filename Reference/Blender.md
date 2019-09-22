@@ -74,7 +74,7 @@
 - **Ctrl+f** = Face Features (Also available at top under the "Face" Button).
 - **u** = UV Features (Also available at top under the "UV" Button).
 
-# Vertex Specific Controls #
+## Vertex Specific Controls ##
 - **Alt-m** = Combine vertices (provides options for combine to first, to last, to middle, collapse multiples.
 - **Alt-m > By Distance** = removes overlapping vertices from SELECTION (often created while simplifying edges with gg moves). Rememeber that it removes them from selection, so often start by hitting 'a' first. Previously, in Blender 2.79 it was Mesh > Vertices > Remove Doubles.
   - Alternate Method 1 =  Mesh > Clean-Up > Merge By Distance at the top of window.
