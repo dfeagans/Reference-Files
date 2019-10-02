@@ -11,7 +11,7 @@
 - **New ViewPorts/Multiple Windows** = Put mouse in any corner of the viewport intended to be split (until crosshairs is shown). Click and drag in the direction the split is desired in.
 - **ViewPort Swapping** - Holding Ctrl and clicking in the corner of the window and then dragging that window to another one will swap the contents of the windows.
 - **Eliminating ViewPorts/Multiple Windows** = Right click the split between the windows and do "Join Area," then click the region you want to be coverd up/removed.
-- **Quad View** = Ctrl+Alt+q toggles quad view on/off. Quad View is the 4 main views together.
+- **Quad View** = Ctrl+Alt+q toggles quad view on/off. Quad View is the 4 main views together. The toggling is super convenient.
 - **Home** = adjusts zoom to show all.
 - **~** = quick view select.
 - **Alt+Middle Mouse** = Hold Alt and Drag Direction w/ Middle Mouse to align view that way.
