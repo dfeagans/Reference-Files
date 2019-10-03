@@ -17,6 +17,7 @@
 - **Alt+Middle Mouse** = Hold Alt and Drag Direction w/ Middle Mouse to align view that way.
 - **Num-pad** = toggles to pre-programmed views.
 - **Tab** = Toggle between Object and Edit mode. Does edit mode for selected object/objects.
+- **Shift+Right Click** = Moves 3d Cursor to that Point.
 - **Shift+a** = Adds mesh primitives at the 3d Cursor.
 - **n** = Hide/Shows properties of current element (on the right of viewport). Works in and out of Edit Mode, so on macro object level to most micro vertex level.
 - **t** = Hide/Shoes tools on the left. Works in and out of Edit Mode.
