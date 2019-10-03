@@ -55,6 +55,7 @@
 - **r** = Rotates object. Amount back be typed into properties explicitely. X,Y,Z to contrain rotation works.
 - **.** = shows menu to select where to rotate/scale/manipulate about. This is the quick select of the "Pivot Point" drop down at the top of the window. Active element is very useful because then the operation will occur about that element. It's just the last element you select, marked in white. So if you select a cloud of vertices, you can shift de-select a point and reselect it to make it white/active.
 - **Shift** - while moving or manipulating anything holding shift makes the movements smaller/more precise.
+- **Ctrl** - while rotating elements holding control makes the rotation snap to 5° increments.
 - **Shift+s** = Snap-To Menu. Can snap cursor to objects or objects to cursor.
 - **Shift+r** = Redo. Nice for building evenly spaced grids while in edit mode (for example, after extruding an edge), or to make evenly spaced objects (for example, after making a duplicate object to the side of the original).
 
