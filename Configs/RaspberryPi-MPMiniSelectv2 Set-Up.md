@@ -27,3 +27,6 @@ The camera I just connected like this one, paying attention to where the contact
 I wanted to be able to turn off the printer if something went wrong on the webcam so I put my electronic outlet from my bedroom on it and then I can use the alexa app to turn the printer off. That did mean I had to leave the raspberry pi on 24/7.
 
 Then, to get remote access and since I already used astroprint, I added the astroprint add-in which lets the optipi connect to my astroprint login. After installing it, I had to go into settings for astroprint and get my key to paste it into the octopi add-in.
+
+## Finding IP Later ##
+I didn't bother installing the stuff to manage the dynamic IP of the Octopi, so I just scanned my network for all devices connected running `arp -a` on the command line.
