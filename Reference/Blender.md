@@ -127,6 +127,7 @@ Mesh -> Normals -> Recalculate Outside.
 - **F11** - brings up previous render.
 - **Shift-s** - save render menu.
 - **Exposure Judgement** - Under the Render Properties list the bottom-most group is "Color Management", turning the View Transform section to "False Color." Appropriately exposed elements are gray-ish. Decrease the lighting strength until the critical elements are gray.
+- **Slots** - You can change the slot to be rendered into at the top. That way you can do comparisons between different settings
 - **De-Noiser** - To use the new Intel AI denoiser, you must be in Blender 2.81+ go to the Layer tab in the properties and check the "Denoising Data." Then under Compositor tab (which is everything that happens after render is finished), you can wire in a new "Denoiser" node into the Compsite node. Specifically you wire the Noisy Image, Denoising Normal, and Denoising Albeto into it and then then the result into the Composite node. Sometimes you'll have to check "Use Nodes" to get things to show up. This is referenced here briefly: https://www.youtube.com/watch?v=5lr8QnR5WWU
 
 # UV Unwrapping #
