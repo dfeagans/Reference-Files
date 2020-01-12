@@ -151,3 +151,12 @@ Mesh -> Normals -> Recalculate Outside.
 
 # Viewing PLY Colors in Blender 2.8 #
 Blender 2.8 removed the normal way for seeing Vertex Colors of ply files: adding a new material and checking the "Vertex Color Paint" box under Material > Options. In Blender 2.8, the easiest way to do it is to plug the Vertex Colors in the Color input of the shader. It's possible to do that by adding a meterial to the object and then do Shift-a > Input/Vertex Colors/Col and wire those colors into the Shader.
+
+# Scripting *
+**Python Console** - Show the actual system console using Window > Toggle System Console. That shows the actual results of your scripts print statements for example.
+**Clear Python Console** - Sometimes it can be useful to keep that screen clear of garbage print debug messages, so clear it using:
+```
+import os
+clear = lambda: os.system('cls') #on Windows System
+clear()
+```
