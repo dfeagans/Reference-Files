@@ -14,10 +14,11 @@
 - Shutdown system: `sudo shutdown -h now`
 
 ## MP Mini Select Motion Controller Update ##
--I updated the motion controller by making sure I could and then getting the files from here: https://www.mpselectmini.com/firmware/motion_controller Then it just required me to format the sdcard a certain way and then load two files on it and put it in. It updated really fast.		 
+- I updated the motion controller by making sure I could and then getting the files from here: https://www.mpselectmini.com/firmware/motion_controller Then it just required me to format the sdcard a certain way and then load two files on it and put it in. It updated really fast.		 
 
 ## Camera ##
--The camera I just connected like this one, paying attention to where the contacts and the blue were facing and it immediately worked without me doing anything: https://www.youtube.com/watch?v=PyGM4Iah0cM&vl=en
+- The camera I just connected like this one, paying attention to where the contacts and the blue were facing and it immediately worked without me doing anything: https://www.youtube.com/watch?v=PyGM4Iah0cM&vl=en
+- The mount I used for the Prusa required flipping the image vertically, which was trivially easy under the Octopi settings.
 
 ## Remote Access ##
 - **Power Control** - I wanted to be able to turn off the printer if something went wrong on the webcam so I put a smart outlet attached to it. Then I can use the alexa app to turn the printer off from anyplace. That did mean I had to leave the raspberry pi on 24/7.
