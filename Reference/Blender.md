@@ -160,3 +160,14 @@ import os
 clear = lambda: os.system('cls') #on Windows System
 clear()
 ```
+
+# Rendering CAD Objects #
+- Export STL from CAD - use as high resolution as possible. It's possible to select multiple bodies/parts in the same file (or export a flat assembly). Blender will still be able to deal with it. 
+- Import STL into Blender - Pay attention to the units and orientation options while doing so.
+- Shade Smooth - Select the object, then Object > Shade Smooth. This will round previously sharp corners though.
+- Split Edges - To correct the rounded over sharp corners add an "Edge Split" moditifer to the object.
+- Apply Materials:
+  - All-In-One Object: It's possible to go in and apply multiple materials to difference faces in the object if required (especially if you have multiple parts imported in your STL).
+  - Break Object Into Parts: If you go into Edit Mode of the object, select all by hitting "a", then hitting "p" will let you separate by loose parts. At that point you can apply different materials to each specific object.
+- Render.
+
