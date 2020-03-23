@@ -164,8 +164,11 @@ clear()
 # Rendering CAD Objects #
 - Export STL from CAD - use as high resolution as possible. It's possible to select multiple bodies/parts in the same file (or export a flat assembly). Blender will still be able to deal with it. 
 - Import STL into Blender - Pay attention to the units and orientation options while doing so.
-- Shade Smooth - Select the object, then Object > Shade Smooth. This will round previously sharp corners though.
-- Split Edges - To correct the rounded over sharp corners add an "Edge Split" moditifer to the object.
+- Smooth Rendering Methods -
+  - Auto Smooth - Current Method in Blender 2.8 - Select the object and go to the Object Data tab and find the Normals properties. Check the Auto Smooth and adjust the angle to suit. The default is 30°.
+- Antiquated Method (Still works, just more manual):
+  - Shade Smooth - Select the object, then Object > Shade Smooth. This will round previously sharp corners though. If it made sense for the part, you could skip the next step and go into edit more and select individual faces to shade smooth.
+  - Split Edges - This modifier splits edges using either manually tuned sharp edges (specific edges are marked sharp in edit mode using `Edge ‣ Mark Sharp/Clear Sharp` or by using a Split Angle number (every face intersection above that angle is interpreted as sharp). It splits the mesh along those edges, which causes the Shade Smooth setting to not smooth the normals across that edge.
 - Apply Materials:
   - All-In-One Object: It's possible to go in and apply multiple materials to difference faces in the object if required (especially if you have multiple parts imported in your STL).
   - Break Object Into Parts: If you go into Edit Mode of the object, select all by hitting "a", then hitting "p" will let you separate by loose parts. At that point you can apply different materials to each specific object.
