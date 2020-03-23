@@ -167,7 +167,7 @@ clear()
 - Smooth Rendering Methods -
   - Auto Smooth - Current Method in Blender 2.8 - Select the object and go to the Object Data tab and find the Normals properties. Check the Auto Smooth and adjust the angle to suit. The default is 30°.
 - Antiquated Method (Still works, just more manual):
-  - Shade Smooth - Select the object, then Object > Shade Smooth. This will round previously sharp corners though. If it made sense for the part, you could skip the next step and go into edit more and select individual faces to shade smooth.
+  - Shade Smooth - Select the object, then Object > Shade Smooth. This will round previously sharp corners though. If it made sense for the part, you could skip the next step and go into edit mode and select individual faces to shade smooth.
   - Split Edges - This modifier splits edges using either manually tuned sharp edges (specific edges are marked sharp in edit mode using `Edge ‣ Mark Sharp/Clear Sharp` or by using a Split Angle number (every face intersection above that angle is interpreted as sharp). It splits the mesh along those edges, which causes the Shade Smooth setting to not smooth the normals across that edge.
 - Apply Materials:
   - All-In-One Object: It's possible to go in and apply multiple materials to difference faces in the object if required (especially if you have multiple parts imported in your STL).
