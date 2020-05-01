@@ -11,6 +11,7 @@
 # General ViewPort Controls #
 - **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
 - **Floor Unit Detail** - By Default, with Inch Units the Floor grid lines are spaced 1 FOOT apart. To change to inch lines, you adjust the scale via the "Viewport Overlays" drop-down in the top right to 1/12.
+- **Full Screen Viewport** - Ctrl + Space will make the currently hovered over viewport full-screw. Hitting ctrl + space again toggles back to the original view with the full interface.
 - **New ViewPorts/Multiple Windows** = Put mouse in any corner of the viewport intended to be split (until crosshairs is shown). Click and drag in the direction the split is desired in.
 - **ViewPort Swapping** - Holding Ctrl and clicking in the corner of the window and then dragging that window to another one will swap the contents of the windows.
 - **Eliminating ViewPorts/Multiple Windows** = Right click the split between the windows and do "Join Area," then click the region you want to be coverd up/removed.
