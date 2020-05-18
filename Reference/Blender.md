@@ -106,7 +106,7 @@
 - **Merging Vertices** - It's sometimes useful to do minor retopogizing using 'gg' and sliding vertices on top of each other. Then you can select all and do "Vertex" > "Remove Double Vertex" at the top to remove the duplicate. Another option is to do that Double Vertex Removal automatically by turning on the "AutoMerge Editing" in the Mesh Options at the very top right of the Blender 2.8 window. The former is likely the most useful for intermittent usage since people usually turn off "AutoMerge Editing" since it can cause issues otherwise.
 - **Face Orientaion / Normals** - If visibilities ever get screwy (likely from unintentionally making floating faces while editing a body), you can diagnose/resolve it using:
   - **Face Orientation** - Can be turned on under the Overlay options. Blue = Outside / Red = Inside. Helps diagnose if it's a genuine normal issue.
-  - ***shift+n** - **Recalculate Normals** - Automatically recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8.
+  - **shift+n** - **Recalculate Normals** - Automatically recalculate all the normals using Mesh -> Normals -> Recalculate Outside. It's in the Mesh menu at the top of Edit Mode in 2.8.
   - **ctrl+shift+n** - **Flip Normals** - Specific faces can be fixed manually under Mesh > Normals > Flip.
 
 # Object Manipulations #
