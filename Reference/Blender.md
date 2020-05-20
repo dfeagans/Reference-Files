@@ -1,6 +1,7 @@
 # FIND PLACE FOR OR DELETE #
 - **alt+left click** - loop selection. In Edit Mode lets you select entire LL chain or faces or edges.
-
+ - **F3** - SEARCH. Finds any command and shows the shortcut.
+ 
 # Customizations Employed #
 - **Turn Off Auto Perspectiive** - Edit > User Preferences > Navigation > Uncheck Auto Perspective
 - **Loops Tools** - Just a ton of really useful tools, shown by right clicking in Edit mode, or by hitting n > Edit.
