@@ -41,10 +41,16 @@
 - **Restriction Toggles** - The filter symbol in the top right is very useful for showing the "Selectable" button next to each object. Very useful for making an object unselectable when you don't want to snap to it for example.
 - **Parents** - To make one object a parent of the other (so that if the parent moves the child follows for example), you select the child, then the parent, and thhen hit Ctrl-p and then "Object (Keep Transform). It will move the object in the outliner under the parent object. 
 
+# Object Modificiations #
+- **Shift+s** = Snap-To Menu. Can snap 3d cursor to objects or objects to 3d cursor.
+- **Origin Movements** = The origin (small orange dot) effects many operations, most commonly mirror. It's possible to move that origin to have more control by selecting the Object menu at the top of main window while in Object mode, then Set Origin provides several options.
+- **Ctrl+a** - *Apply* Transform. If you scale an object or move it in X,Y,Z, it will change the objects Transform properties that are visible by hitting *n* in the top right corner. It's possible to then use those to say undo the movement later, animate it, or maintain an intelligent local coordinate system. Additionally, the scale of the object will object impact later modifiers and texture applications. Applying the scaling, or whatever transform will maintain the position but set that parameter back to 0.
+
 # Visibility #
 - **h** = hide selected. Visibility affects feature creation like edge loop construction and l-selection. Meaning hiding things temporarily is extremely useful. If you are propoprtionally edititing a group of vertices hidden vertices won't move even.
 - **alt+h** = show all temporarily hidden items.
 - **Shift+h** = hide all but selected.
+- **Local View** - "/" on the Num pad lets you toggle in and out of local view with only the selected object.
 - **Clipping** = you can adjust where your view gets clipped by hitting n to get the properties side bar then hit the View tab and change 'Clip Start'
 - **z** = View Mode selection wheel. Different presentation of what's in top-right.
 - **Alt-z** = X-ray. Show Whole Scene Transparent. Limits selection to what's visible or all. Also, button in the top right of viewport.
@@ -62,7 +68,6 @@
 - **.** = shows menu to select where to rotate/scale/manipulate about. This is the quick select of the "Pivot Point" drop down at the top of the window. Active element is very useful because then the operation will occur about that element. It's just the last element you select, marked in white. So if you select a cloud of vertices, you can shift de-select a point and reselect it to make it white/active.
 - **Shift** - while moving or manipulating anything holding shift makes the movements smaller/more precise.
 - **Ctrl** - while rotating elements holding control makes the rotation snap to 5° increments.
-- **Shift+s** = Snap-To Menu. Can snap cursor to objects or objects to cursor.
 - **Shift+r** = Redo. Nice for building evenly spaced grids while in edit mode (for example, after extruding an edge), or to make evenly spaced objects (for example, after making a duplicate object to the side of the original).
 
 # Edit Mode Specific Commands #
