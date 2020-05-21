@@ -152,7 +152,7 @@
   - a = still selects all.
   - g = still moves around.
   - l = still selects all linked geometry.
-  - Display Tab -> Stretch = shows you how much the texture is stretched on each face (and likely where you need to seam more).
+  - Stretch = It's possible to see how much the mesh faces are stretched, to diagnose where further seaming or adjusting is likely needed. It's hidden under the "n" Sidebar in the top right, under View Tab > Display > Stretching.
   - Sync = syncs your selection between the mesh viewport and the UV editor viewport so you can see where the unwrapped object is on your actual mesh.
   
 # Texture Painting #
