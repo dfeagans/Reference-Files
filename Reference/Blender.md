@@ -143,7 +143,7 @@
 # UV Unwrapping #
 - Before unwrapping anything you have to be in edit mode for the object and select the faces you want to unwrap, likely by hitting a to select all of them.
 - **Smart UV Project** = automated UV Unwrapping. Bring up using "u" shortcut.
-- **Ctrl+e -> Mark Seam** = Manually define a seam (in red) along that selected edge.
+- **Mark Seam** - **Ctrl+e -> Mark Seam** or Right Clicking after Selecting the *Edges* will manually specify a seam along that selected edge. Those edges will be marked in RED.
 - **Clear Seam** = Obviously stops the edge from being a seam for unwrap.
 - **Unwrap** = Unwrap Mesh using defined seams. Bring up using "u" shortcut.
 - **General UV Editor Notes**
