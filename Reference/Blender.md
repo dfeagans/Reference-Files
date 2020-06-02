@@ -6,8 +6,9 @@
 - **Turn Off Auto Perspectiive** - Edit > User Preferences > Navigation > Uncheck Auto Perspective
 - **Loops Tools** - Just a ton of really useful tools, shown by right clicking in Edit mode, or by hitting n > Edit.
 - **UV Squares** - https://github.com/Radivarig/UvSquares was manually installed to help square up UV un-wraps. Not sure how critical it actually is though.
-- **Node Wranlger** - Not used a ton yet, but apparently a must have for managing shading nodes. More to come.
+- **Node Wrangler** - Not used a ton yet, but apparently a must have for managing shading nodes. More to come.
 - **fspy** - Installed the windows image tool from here: https://github.com/stuffmatic/fSpy/releases, and then installed the blender add-in to allow imports of those files from here: https://github.com/stuffmatic/fSpy-Blender. Don't even bother extractign the fspy-Blender add-in. Install right from zip using the normal Edit > Prefences > Add-Ons.
+- **Export Paper Model** - Extremely cool additions to export flattened low poly models to be made from paper. Can even print the texture on it. Exports as a PDF. Lots of options during export.
 
 # General ViewPort Controls #
 - **Unit Changes** = Got to the "Scene" tab under properties and then Unit Systems, Length to whatever you need.
