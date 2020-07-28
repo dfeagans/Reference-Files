@@ -26,7 +26,7 @@ To get it to work after v13.10, I had to install Gnome Tweak Tool. If you have t
 
 THIS MAY OR MAY NOT BE NECESSARY DEPENDING ON MAC OR PC KEYBOARD: Also swap the Windows/Command key with Alt, so that hitting Alt is easier. Alt is the meta key and is used a lot in emacs. Under Keyboard Layout > Options > Alt/Win Key Behavior check "Left Alt is swapped with left Win." 
 
-### SSH Config###
+### SSH Config ###
 For quick connecting using keys as opposed to password and not having to trpe anything besides `ssh aws` - reference SSH notes in [setup repo](https://github.com/dfeagans/setup).
 
 ### [PS3MediaServer](https://help.ubuntu.com/community/Ps3MediaServer) ###
@@ -84,24 +84,7 @@ Xkeymacs (Emacs keybindings for Windows): [downloaded here](http://www.cam.hi-ho
 
 Here's the [exported configuration](xkeymacsConfig.reg). It has navigation commands, delete/backspace on the home-row, new-line C-j, and kill/yank stuff. Make sure to add C-o as well. It's the useful insert newline before current one. 
 
-Also, use the keyboard map tool (I believe referenced in the starting pages of Startup Class) to switch the left-Control and Caps Lock keys. Prevents emacs pinky. It's also possible to use the below regedit hack:
-```
-1. Click Start -> Run
-2. Type: regedit, and click OK
-3. Go to: HKEY_LOCAL_MACHINE -> System -> CurrentControlSet -> Control -> KeyBoard Layout  (Note: KeyBoard Layout, and not KeyBoard Layouts)
-4. Right-click: Keyboard Layout, and select New -> Binary value
-5. Rename: New Value #1 -> Scancode Map
-6. Right click: Scancode Map -> Modify
-
-0000  00 00 00 00 00 00 00 00
-0008  03 00 00 00 1d 00 3a 00
-0010  3a 00 1d 00 00 00 00 00  
-0018
-
-7. Close regedit and restart your computer
-```
-
-Other methods include AutoHotKey and EmacsEverywhere scripts, but it doesn't work in Outlook.
+Also, use the keyboard map tool (I believe referenced in the starting pages of Startup Class) to switch the left-Control and Caps Lock keys. Prevents emacs pinky. I just grabbed the zip file with the reg file in [here](https://www.howtogeek.com/howto/windows-vista/disable-caps-lock-key-in-windows-vista/).
 
 ### Apple Keyboard with Ubuntu (never bothered with) ###
 To get the function (F1-F19) keys to work, you have to hold the "fn" button on the keyboard. fn+F2 is useful for renaming files. Although I didn't really mess with this; to get this pernamently changed visit [here](https://help.ubuntu.com/community/AppleKeyboard).
