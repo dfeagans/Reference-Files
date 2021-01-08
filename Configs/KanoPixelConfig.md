@@ -22,6 +22,10 @@
 - https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/pixel-kit - Library for Rendering Screen Graphics and Reading Buttons/Knobs
 - https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/pixel-turtle - Toyish library for creating graphics. Not primary method.
 
+## Alternative - OEM SDK ##
+- https://kanocomputing.github.io/community-sdk-wiki/Home.html - Haven't touched but looks more promising, doesn't require reflash.
+- https://github.com/KanoComputing/community-sdk-wiki - Actual repo for SDK.
+
 ## (UNREAD) Arduino Integration ##
 - Full Feature List of ESP32 and Arduino Details: https://learn.sparkfun.com/tutorials/esp32-thing-hookup-guide
 - Someone used the Kano Pixel with the Arduino IDE and resolved:
