@@ -18,8 +18,9 @@
 - If at any time you want to return to the state where it makes it's own network (in case you aren't around a WIFI network), you can return it to that state (Blue Screen) by holding down the two red buttons and turning it off/on.
 
 ## Putting it to Work ##
-- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/
-- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/pixel-kit
+- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/ - General Documentation
+- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/pixel-kit - Library for Rendering Screen Graphics and Reading Buttons/Knobs
+- https://murilopolese.github.io/kano-pixel-kit-pixel32-docs/pixel-turtle - Toyish library for creating graphics. Not primary method.
 
 ## (UNREAD) Arduino Integration ##
 - Full Feature List of ESP32 and Arduino Details: https://learn.sparkfun.com/tutorials/esp32-thing-hookup-guide
