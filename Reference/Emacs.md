@@ -19,7 +19,7 @@ Built in Tutorial is pulled up using: `M-x help-with-tutorial`
 ## FILES ##
 - `C-x C-f` = find file to open or create. You can type to search for it or use the arrows to navigate around and select it.
 - `C-f C-b` shows all the files you've opened and modified.
-- `C-x b` = lets you quickly switch between the currently opened buffers just by typing it's name. Tab auto-completes like Bash which is very useful.
+- `C-x b` = lets you quickly switch between the currently opened buffers just by typing it's name. Tab auto-completes like Bash which is very useful. Also lets you create new buffers if the name you enter is new.
 - `C-x C-s` = save current buffer.
 - `C-x C-w` = **save-as** current buffer.
 - `C-x s` = individually prompts to save ALL the buffers that have been modified.
