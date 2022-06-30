@@ -39,9 +39,10 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 * `git show` lets you look at complete previous files using just the hash!
 
 #### Undo Changes ####
+* `git restore` replaced became the new way to unstage and unchange modifications to files in a more recent GIT version. You use `git restore FILENAME` to get rid of the changes in your working directory (instead of checkout). Then you use `git restore --staged FILENAME` to unstage a file, but keep it's changes.
 * `git reset filename` (git add undo) removes a file's changes from git's staging area local copy remains modified. 
 * `git reset --hard` resets all the files that were tracked in git. Use this sparingly.
-* `git checkout -- filename.txt` (modification undo) discards your modifications to filename.txt and pulls the last checked in fiilename.txt from your repo. The -- controls the branch you are pulling from. I think it automatically pulls from your HEAD. If it wasn't there it might pull from a branch called filename.txt.
+* `git checkout -- filename.txt` (modification undo) discards your modifications to filename.txt and pulls the last checked in fiilename.txt from your repo. The -- controls the branch you are pulling from. I think it automatically pulls from your HEAD. If it wasn't there it might pull from a branch called filename.txt. This was replaced by `git restore` command in a more recent git version.
 * `git checkout <hash>` lets you pull up and previous file from a commit. Get the hash code from `git log` (or better yet `git hist`).
 * `git revert HEAD` (commit undo) lets you cancel your last actual commit. It does add a "revert" comment to the log. It doesn't just take the previous commit out.
 * `git reset --hard HASHorTAG` (delete commit) removes the commit from the normal log. The commit you removed with still show up with `git log --all`. To delete it from there use `git tag -d TAG`.
