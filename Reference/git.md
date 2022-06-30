@@ -18,7 +18,8 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 #### View Changes ####
 * `git status` lets you know how which files you are/aren't tracking.
 * `git log` gives you all the details for the recent commits. git log --pretty=oneline shows everything a bit cleaner. `git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'` shows all the changes from the past week.
-* `git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short`  is the best one though. I have this setup as `git hist` using an alias (see install config notes for instructions). `git log -p --color Filename` shows the entire revision list for that file with the commit notes and the modifications listed.
+* `git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short` is the pretty darn good though. I have this setup as `git hist` using an alias (see install config notes for instructions). `git log -p --color Filename` shows the entire revision list for that file with the commit notes and the modifications listed.
+* If you want to add a git hist write to the config file you can use this one: `git config --global alias.hist "log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short"`
 * `git diff` tells you specifically what has changed in modified files that aren't staged yet. git diff --staged (shows the changes for just the files you're about to commit). git diff filename.html shows the specific files revisons. You can even git diff two versions using their hashes. Use q to quit. git diff HEAD shows most recent revisions.
 * `git show` lets you look at complete previous files using just the hash!
 
