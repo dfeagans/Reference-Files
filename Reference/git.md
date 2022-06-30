@@ -15,6 +15,7 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 * `git commit -m "message for commit"` actually adds the commit. Do this one at a time with each part. 
 * `amend`: To revise a git commit message, use `git commit --amend -m "revised commit message"` immediately after doing the commit (before staging anything else). If you stage any modifications and run that command then it just rolls the additional changes in with the previous commits. In a case like that, if you were just fixing a typo or something, then using `git commit --amend --no-edit` just adds the additions while keeping the commit message the same.
 * `git push -u origin master` - pushes files to the origin repo (github). The -u saves the settings so that you just have to type `git push` next time.
+* `git push -f origin some_branch` - If you do an amend to a commit that's already been pushed then you're then doing a normal push would cause a merge conflict. If you're just working by yourself, you use the force option to push your local branch state up to the remote. Not good if other people are working on the same branch though.
 
 #### View Changes ####
 * `git status` lets you know how which files you are/aren't tracking.
@@ -47,6 +48,8 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 
 #### Misc ####
 * `git tag TAG` lets you tag releases like v1, v1.1, etc. Then you can get the version previous to v1 using git checkout v1^ or just get a specific release git checkout v3.1. git tag views your current branches tags.
+* `git tag -f TAG` is how you "move" the tag from one commit to the current one. Say you've tagged a commit but then made an update. That command will force that new commit to be tagged, not the old one.
+* `git push -f --tags` is per usual dangerous if you're working with others, but this pushes any tag changes up. It would be required if you did the aforementioned command that moves a tag to a new commit.
 * `git rm filename.blah` not only removes the changes, but also completely removes the file from the changing area. The deletion of the files will show up in the commit.
 * `git mv filename newname` - lets you rename a file and track it appropriately in git. If you just use mv, it will add a delete file added file revision to your git tree.
 * `git remote show origin` - shows you everything about the project you're working on: where it's pushing too, different branches, status of each branch locally, etc.
