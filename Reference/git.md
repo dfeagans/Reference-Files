@@ -34,7 +34,6 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 * `git reset --hard HASHorTAG` (delete commit) removes the commit from the normal log. The commit you removed with still show up with `git log --all`. To delete it from there use `git tag -d TAG`.
 * `git remote show origin` - this shows where your repo is copy to/from. C9 is automatically set up. You would have to `git remote add origin URL` otherwise. If you create a repo in git and then use the URL to create a workspace by cloning from URL, it's already pointed to the correct origin.
 * to pull files from github (say a friend modified github) you do `git remote update` or `git pull origin master` to pull from a specific remote repo.
-* to change a bunch of old commit messages, use `git rebase --interactive PARENT_OF_FLAWED_COMMIT`. Then change pick to reword for all the ones you want to change (close and save). Then it will open a file for each commit you wanted to change... Change, Save, and Close each one.
 
 #### Branches ####
 * **Point of Branch and Merge** - maintain a master branch and a dev branch, do different kinds of development in dev and then merge the changes back into main later. After doing the work in the dev branch, `git checkout -- master` then `git merge dev` to bring them in (i think you then need to add and push).
