@@ -41,7 +41,7 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 * `git merge test`, if ran from example_branch (get in the example_branch by running `git checkout example_branch`), merges test's modifications to example_branch. git merge by default does a fast-forward merge and just tacks your stuff onto the end if possible. If you want to actually show that you were working in a different branch and show the true merging of the development paths, use the `--no-ff` option. ?>i think you would have to `git checkout -- filenames_to_be_unmodified` to get rid of your modifications<?. Then you have to git add those files, commit, and push as normal.
 * `--squash` - "git merge --squash branch_name" merges everything, but allows you to just do one commit, so then you add, commit, and push. It hides all the commits that occured within the branch aka "micro-commits".
 * The proper way to use branches is to work on a development branch, ex. devDF. Then once I get done with the feature, merge to master by `git checkout master`, then `git merge --no-ff devDF` (-squash if needed). You can push that branch up with `git push origin devDF`. 
-* `git rebase master`, if ran from a different branch, changes the master tree to that of the branch, so it's linear as opposed to merging. Just a little cleaner. Rebase is good for local changes, stick with merges for the public repos, that way you don't affect everyone elses trees. If you do `git rebate -i` it's the interactive mode that lets you squash, delete, or change the commits along the way.
+* `git rebase master`, if ran from a different branch, changes the master tree to that of the branch, so it's linear as opposed to merging. Just a little cleaner. Rebase is good for local changes, stick with merges for the public repos, that way you don't affect everyone elses trees. If you do `git rebate -i` it's the interactive mode that lets you squash, delete, or change the commits along the way. Note that squash combines the commits and keeps both messages whereas fix up,removes that commit message and keeps the one.
 * `git branch -D BranchName` - deletes the branch from your local computer.  Deleting the branch is necessary after your done playing in it.
 * `git push origin :BranchName` - deletes the branch from the github page.
 
@@ -52,7 +52,6 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 * `git rm filename.blah` not only removes the changes, but also completely removes the file from the changing area. The deletion of the files will show up in the commit.
 * `git mv filename newname` - lets you rename a file and track it appropriately in git. If you just use mv, it will add a delete file added file revision to your git tree.
 * `git remote show origin` - shows you everything about the project you're working on: where it's pushing too, different branches, status of each branch locally, etc.
-* If ever needed this is how you compress a bunch of commits into one commit comment to make them cleaner: http://stackoverflow.com/questions/5189560/how-can-i-squash-my-last-x-commits-together-using-git.
 * Also you can force update a server using the "+" character before the branch name. For example git push origin +master, but don't do this blindly.
 
 #### Working using two computer and github to host the repo ####
