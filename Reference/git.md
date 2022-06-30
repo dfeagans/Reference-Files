@@ -12,7 +12,8 @@ Interactive Tutorial  http://try.github.io/levels/1/challenges/
 
 #### Add Changes ####
 * `git add` adds files to the git "staging area" to be tracked by git. You will have to commit them though. `git add .` adds the current directory's eligable contents. You can git add specific files (`git add index.html`) and even use wildcards (`git add *.txt`).
-* `git commit -m "message for commit"` actually adds the commit. Do this one at a time with each part. To revise a git commit note, use `git commit --amend -m "revised commit message"`. You can make modifications to a file and git add it again doing the --amend just rolls the commit in with previous one, replacing the first commit comment.
+* `git commit -m "message for commit"` actually adds the commit. Do this one at a time with each part. 
+* `amend`: To revise a git commit message, use `git commit --amend -m "revised commit message"` immediately after doing the commit (before staging anything else). If you stage any modifications and run that command then it just rolls the additional changes in with the previous commits. In a case like that, if you were just fixing a typo or something, then using `git commit --amend --no-edit` just adds the additions while keeping the commit message the same.
 * `git push -u origin master` - pushes files to the origin repo (github). The -u saves the settings so that you just have to type `git push` next time.
 
 #### View Changes ####
