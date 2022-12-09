@@ -3,9 +3,11 @@
 ## Referneces:
 - [Source Video for Most of This Document](https://youtu.be/I2wec_L6j14)
 - [General Tutorial on xPRO v5](https://makerhardware.net/knowledge-base/faqs/xpro-v5-faq/)
+
 ## My System Specifics:
 - **NC Emergency Stop on NO Firmware:** This just means the button must be pushed to run and twisted out to stop it. Opposite of normal. Would be resolved with [different firmware](https://github.com/Spark-Concepts/xPro-V5/tree/main/Firmware) flash.
 - **Slower Max Rates and Default Accelerations** - See below for why I did run particularly fast max rates or accelerations.
+- **Steppers Failing to Energize** - I was warned by some people that the xPro v5 will sometimes fail to energize and hold the steppers on initial start-up when the usb cord is plugged in. They said their work around was not plugging in the usb cord until the system was powered up. I haven't observed this yet, but wanted to note it.
 
 ## Original Steps For Setting Up xProV5 and QueenBeenPro 1000mm x 1000mm:
 
