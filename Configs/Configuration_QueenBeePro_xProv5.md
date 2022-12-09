@@ -70,8 +70,18 @@
 
         $X/maxtravel=750
         %Y/maxtravel=750
-        $A/maxtravle=750 (again, probably not necessary)
+        $A/maxtravel=750 (again, probably not necessary)
         $Z/maxtravel=100
+- **Make Sure Limits Are On (Hard and Soft)** - Check the limit settings using `$limits/`. Mine showed that both hard and soft limits were on. They were actually both off by default but I turned them on using the commands below. The hard limit stops the machine if the limit switches are hit during operation. The soft limit triggers if a command requests to move outside the maxtravel limits. Reset/unlock afterwards to make sure it's taken effect.
+
+        $limits/hard=on
+        $limits/soft=on
 
 - **Aligning Y and A/Y2 Axis** - I need to look into a better way to do this, but to make sure there was minimum binding by them being skewed to each other after homing the machine I used a digital calipers to measure each of those axis's stepper mounting plates to the carriage plate on the same side. Since I had the stepper idletime set to 1 I could adjust them by hand until they measured perfectly. Then I homed again, checked it, and they seemed good.
-- **Stepper Motor Amperage** - The default run amps was set to 1.8 and default hold to 1.2. You can check that using `$X/current`, `Y/current`, etc.. My steppers were the 2.45 Nm NEMA 23's which are rated for 3 amps. His tutorial said to scale the rated amperage by 0.707. I assume that's something to do with a sin waves peak voltage/current being 1/0.707 the RMS voltage/current.
+- **Stepper Motor Amperage** - The default run amps was set to 1.8 and default hold to 1.2. You can check that using `$X/current`, `Y/current`, etc.. My steppers were the 2.45 Nm NEMA 23's which are rated for 3 amps. His tutorial said to scale the rated amperage by 0.707. I assume that's something to do with a sin wave's peak voltage/current being 1/0.707 times the RMS voltage/current.
+
+        I just left the currents as is for now, but they would be changed using following settings for my 3amp motors:
+            $X/current/run=2.12
+            $Y/current/run/2.12
+            $A/current/run=2.12
+            $Z/current/run/2.12
