@@ -80,8 +80,22 @@
 - **Aligning Y and A/Y2 Axis** - I need to look into a better way to do this, but to make sure there was minimum binding by them being skewed to each other after homing the machine I used a digital calipers to measure each of those axis's stepper mounting plates to the carriage plate on the same side. Since I had the stepper idletime set to 1 I could adjust them by hand until they measured perfectly. Then I homed again, checked it, and they seemed good.
 - **Stepper Motor Amperage** - The default run amps was set to 1.8 and default hold to 1.2. You can check that using `$X/current`, `Y/current`, etc.. My steppers were the 2.45 Nm NEMA 23's which are rated for 3 amps. His tutorial said to scale the rated amperage by 0.707. I assume that's something to do with a sin wave's peak voltage/current being 1/0.707 times the RMS voltage/current.
 
-        I just left the currents as is for now, but they would be changed using following settings for my 3amp motors:
+        I just left the currents as is for now, but they would be changed using following maximum settings for my 3amp motors:
             $X/current/run=2.12
             $Y/current/run/2.12
             $A/current/run=2.12
             $Z/current/run/2.12
+
+- **VFD Set-Up** - Control using the front panel initially, instead of the RS485 modbus. I belive my spindle is an GDZ-80-2.2B.
+    - make sure the jumpers are set to 2-3 internally to allow the front potentiometer to be used.
+    - Make sure these settings are used:
+            PD000 - 0 (default unlocked)
+            PD001 - 0 (default, source of command is operator)
+            PD002 - 1 (default, source of frequency is simulation amount set from board potentiometer) **important**
+            PD004 - 400 (default, sets base frequency)
+            PD005 - 400 (default, sets max frequency)
+            PD011 - 100 (minimum speed setting recommended for water-cooler spindle)
+            PD142 - 8 (sets max amps. One instruction said that the 2.2kw should have 10 here, but the bulkman 3d website for the 2.2kw, [here](https://bulkman3d.com/product/spk-2200/), said that it was rated for 8 amps. I also saw lots of other comments online talking about having it set to 9 amps. Regardless, I used 8amps.
+            PD080 - 220 (max voltage of mortor)
+            PD143 - 2 (number of motor poles, found [this](https://www.ricocnc.com/products/21-2.2kw-Water-Cooled-Liquid-Cooling-Spindle-GDZ-80-2.2B-for-Sale.html) online while looking for specific spindle)
+            
