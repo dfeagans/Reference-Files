@@ -89,6 +89,27 @@
 - **VFD Set-Up** - Control using the front panel initially, instead of the RS485 modbus. I belive my spindle is an GDZ-80-2.2B.
     - make sure the jumpers are set to 2-3 internally to allow the front potentiometer to be used.
     - Make sure these settings are used:
+            PD013 - 8 (resets everything to factory defaults)
+            PD001 - 0 (use the LCD display settings to control it)
+            PD002 - 0 (use the LCD frequency to control motor)
+            PD005 - 400 (max frequency, set first to enable setting other frequency settings)
+            PD003 - 400
+            PD004 - 400 
+            PD007 - 0.5 (min freuqncy)
+            PD008 - 110 (max voltage)
+            PD009 - 15
+            PD0190 -8 (min voltage)
+            PD011 - 133.33 (min frequency)
+            PD014 - 10 (accel time)
+            PD015 - 10 (decel time)
+            PD025 - 1 (starting method is frequncy tracking)
+            PD141 - 110 (max volts)
+            PD142 - 8 (max amps)
+            PD143 - 2 (number of poles)
+            PD144 - 3000 (revolutions at 50hz setting)
+            UNPLUG. Connect Spindle and then plug back in and set the frequency then Run! WORKED (Redo this section).
+            
+            
             PD000 - 0 (default unlocked)
             PD001 - 0 (default, source of command is operator)
             PD002 - 1 (default, source of frequency is simulation amount set from board potentiometer) **important**
