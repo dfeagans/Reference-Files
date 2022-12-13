@@ -86,9 +86,8 @@
             $A/current/run=2.12
             $Z/current/run/2.12
 
-- **VFD Set-Up** - Control using the front panel initially, instead of the RS485 modbus. I belive my spindle is an GDZ-80-2.2B.
-    - make sure the jumpers are set to 2-3 internally to allow the front potentiometer to be used.
-    - Make sure these settings are used:
+- **VFD Set-Up** - Original set-up set the frequency using the front panel initially, instead of the RS485 modbus. Note that my spindle is an 110v, 2.2kw unit called "GDZ-80-2.2B. Originally, I had set the jumpers to connect the 2-3 (center and right) legs. That was because I was trying to use the front potentiometer originally, but didn't in the end. It was still set to 2-3 for all the below though. Otherwise, This was the settings process I used, remember to use *shift* to jump over units.
+    
             PD013 - 8 (resets everything to factory defaults)
             PD001 - 0 (use the LCD display settings to control it)
             PD002 - 0 (use the LCD frequency to control motor)
@@ -104,19 +103,8 @@
             PD015 - 10 (decel time)
             PD025 - 1 (starting method is frequncy tracking)
             PD141 - 110 (max volts)
-            PD142 - 8 (max amps)
+            PD142 - 8 (sets max amps. One instruction said that the 2.2kw should have 10 here, but the bulkman 3d website for the 2.2kw, https://bulkman3d.com/product/spk-2200/, said that it was rated for 8 amps. I also saw lots of other comments online talking about having it set to 9 amps. Regardless, I used 8amps.
             PD143 - 2 (number of poles)
             PD144 - 3000 (revolutions at 50hz setting)
-            UNPLUG. Connect Spindle and then plug back in and set the frequency then Run! WORKED (Redo this section).
-            
-            
-            PD000 - 0 (default unlocked)
-            PD001 - 0 (default, source of command is operator)
-            PD002 - 1 (default, source of frequency is simulation amount set from board potentiometer) **important**
-            PD004 - 400 (default, sets base frequency)
-            PD005 - 400 (default, sets max frequency)
-            PD011 - 100 (minimum speed setting recommended for water-cooler spindle)
-            PD142 - 8 (sets max amps. One instruction said that the 2.2kw should have 10 here, but the bulkman 3d website for the 2.2kw, [here](https://bulkman3d.com/product/spk-2200/), said that it was rated for 8 amps. I also saw lots of other comments online talking about having it set to 9 amps. Regardless, I used 8amps.
-            PD080 - 220 (max voltage of mortor)
-            PD143 - 2 (number of motor poles, found [this](https://www.ricocnc.com/products/21-2.2kw-Water-Cooled-Liquid-Cooling-Spindle-GDZ-80-2.2B-for-Sale.html) online while looking for specific spindle)
-            
+                     
+    - After those settings are done: Un-plug, Connect Spindle, and then plug back in and set the *frequency* on screeen then Run! WORKED (Redo this section).
