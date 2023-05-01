@@ -1,6 +1,6 @@
 # Configuration Details on 22/12/07
 
-## Referneces:
+## References:
 - [Source Video for Most of This Document](https://youtu.be/I2wec_L6j14)
 - [General Tutorial on xPRO v5](https://makerhardware.net/knowledge-base/faqs/xpro-v5-faq/)
 
