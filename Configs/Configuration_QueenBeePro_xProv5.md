@@ -94,7 +94,7 @@
             PD005 - 400 (max frequency, set first to enable setting other frequency settings)
             PD003 - 400
             PD004 - 400 
-            PD007 - 0.5 (min freuqncy)
+            PD007 - 0.5 (min frequency)
             PD008 - 110 (max voltage)
             PD009 - 15
             PD0190 -8 (min voltage)
@@ -107,4 +107,4 @@
             PD143 - 2 (number of poles)
             PD144 - 3000 (revolutions at 50hz setting)
                      
-    - After those settings are done: Un-plug, Connect Spindle, and then plug back in and set the *frequency* on screeen then Run! WORKED (Redo this section).
+    - After those settings are done: Un-plug, Connect Spindle, and then plug back in and set the *frequency* on screeen then Run. Note that since it's a 2 pole motor the RPM of the motor is the Hz setting * 60. Meaning that 133.33Hz min frequency equals 8000rpm min speed and 400Hz max frequency equals 24000rpm max speed.
