@@ -109,8 +109,26 @@
                      
     - After those settings are done: Un-plug, Connect Spindle, and then plug back in and set the *frequency* on screeen then Run. Note that since it's a 2 pole motor the RPM of the motor is the Hz setting * 60. Meaning that 133.33Hz min frequency equals 8000rpm min speed and 400Hz max frequency equals 24000rpm max speed.
 
+## Wifi Set-Up:
 
-- Setting Up Wifi - The xProV5 starts it Access Point/Hot Spot mode, so connect to the network it creates and use the default password (12345678). Then go to http://192.168.0.1/ and under the ESP3D tab change the Station SSID and Station Password to your networks. Then change the radio mode to Client Station so it knows to connect to your network. Then you can go to the static IP there to access the Web UI.
+- The xProV5 starts it Access Point/Hot Spot mode, so connect to the network it creates and use the default password (12345678). Then go to http://192.168.0.1/ and under the ESP3D tab change the Station SSID and Station Password to your networks. Then change the radio mode to Client Station so it knows to connect to your network. Then you can go to the static IP there to access the Web UI.
 
-- Useful GRBL Commands:
-- $X - unlock after reset. Necessary since the Webui doesn't have an unlock button. 
+## Useful GRBL Commands:
+The webUI has fewer buttons than the interface that's served up by the xProV5 itself when you first connect to it:
+- **Reset** - instead of a clearly labelled button, you have to hit the refresh symbol button.
+- **Unlock** - There's no unlock button in webui, so you have to send the gcode *$X* after reset.
+
+## Facing Wasteboard:
+- Bit used was Ø1" Surfacing Bit with 1/4" Shank from Amazon (BK-191028).
+- Used https://www.intuwiz.com/plane.html to create the gcode for facing my wasteboard using the following settings:
+
+            Center of Coordinates = 3         #
+            ZigZag X Selected                 #Thinking was that's a single motor movement, not Y/A.
+            Side a & b = 750                  #
+            Tool Diameter =
+            Y Overlap Percentage =
+            Total Depth of Cut:
+            Cut Depth Per Pass:
+            Feed Rate (X,Y) =
+            Feed Rate (Z)   = 
+        
