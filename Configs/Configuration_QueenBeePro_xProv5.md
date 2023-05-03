@@ -108,3 +108,9 @@
             PD144 - 3000 (revolutions at 50hz setting)
                      
     - After those settings are done: Un-plug, Connect Spindle, and then plug back in and set the *frequency* on screeen then Run. Note that since it's a 2 pole motor the RPM of the motor is the Hz setting * 60. Meaning that 133.33Hz min frequency equals 8000rpm min speed and 400Hz max frequency equals 24000rpm max speed.
+
+
+- Setting Up Wifi - The xProV5 starts it Access Point/Hot Spot mode, so connect to the network it creates and use the default password (12345678). Then go to http://192.168.0.1/ and under the ESP3D tab change the Station SSID and Station Password to your networks. Then change the radio mode to Client Station so it knows to connect to your network. Then you can go to the static IP there to access the Web UI.
+
+- Useful GRBL Commands:
+- $X - unlock. Necessary since the Webui doesn't have an unlock button.
