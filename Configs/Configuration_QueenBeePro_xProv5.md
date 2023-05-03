@@ -113,4 +113,4 @@
 - Setting Up Wifi - The xProV5 starts it Access Point/Hot Spot mode, so connect to the network it creates and use the default password (12345678). Then go to http://192.168.0.1/ and under the ESP3D tab change the Station SSID and Station Password to your networks. Then change the radio mode to Client Station so it knows to connect to your network. Then you can go to the static IP there to access the Web UI.
 
 - Useful GRBL Commands:
-- $X - unlock. Necessary since the Webui doesn't have an unlock button.
+- $X - unlock after reset. Necessary since the Webui doesn't have an unlock button. 
