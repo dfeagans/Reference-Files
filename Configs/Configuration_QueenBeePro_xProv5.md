@@ -115,7 +115,7 @@
 
 ## Useful GRBL Commands:
 The webUI has fewer buttons than the interface that's served up by the xProV5 itself when you first connect to it:
-- **Reset** - instead of a clearly labelled button, you have to hit the refresh symbol button.
+- **Reset** - instead of a clearly labelled button, you have to hit the refresh symbol button. Looking into the js code, it is sending the best reset command, equivalent to Ctrl-X. Specificaly, `SendRealtimeCmd(String.fromCharCode(0x18));`.
 - **Unlock** - There's no unlock button in webui, so you have to send the gcode *$X* after reset.
 
 ## Facing Wasteboard:
