@@ -122,13 +122,14 @@ The webUI has fewer buttons than the interface that's served up by the xProV5 it
 - Bit used was Ø1" Surfacing Bit with 1/4" Shank from Amazon (BK-191028).
 - Used https://www.intuwiz.com/plane.html to create the gcode for facing my wasteboard using the following settings:
 
-            Center of Coordinates = 3         #
-            ZigZag X Selected                 #Thinking was that's a single motor movement, not Y/A.
-            Side a & b = 750                  #
-            Tool Diameter =
-            Y Overlap Percentage =
-            Total Depth of Cut:
-            Cut Depth Per Pass:
-            Feed Rate (X,Y) =
-            Feed Rate (Z)   = 
+            Center of Coordinates = 3 
+            ZigZag X Selected
+            Side a & b = 775           
+            Tool Diameter = 25.4
+            Y Overlap Percentage = 30
+            Total Depth of Cut = 1
+            Cut Depth Per Pass = 1
+            Feed Rate (X,Y) = 2000
+            Feed Rate (Z)   = 50
         
+- Then I homed the machine, zeroed everything, navigated roughly to the center of the board, lowered the z until it just touched, zeroed only the z, homed, and then ran the resulting NC code.
