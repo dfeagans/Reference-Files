@@ -133,3 +133,10 @@ The webUI has fewer buttons than the interface that's served up by the xProV5 it
             Feed Rate (Z)   = 50
         
 - Then I homed the machine, zeroed everything, navigated roughly to the center of the board, lowered the z until it just touched, zeroed only the z, homed, and then ran the resulting NC code.
+
+## Fusion 306 Settings:
+- **Post-Processor**: used the standard "Grbl / gbrl" post processor including with Fusion 360.
+- **Safe Retract Setting** - set to 'Clearance Height' in the post-processor settings. Originally, the default had the Safe Retracts setting to "G28". That made the machine go back to the machine's reference position at the start and the end of the path. I believe the intention was to provide the ability to do tool changes then. I used "g28.1" to set that reference position at the same time I set my work position. To avoid having to remember that I switched to using the Safe Retracts setting as "Clearance Height" instead. That way I didn't risk forgetting. It's my understanding that the "G53" setting causes the machine to restract to the machine home position before and after the change. Again the intention is to provide repeatable tool change point. I have not tested that though.
+- **Coolant** - Set to disabled under the Tool Path, since I don't have it. Prevents the unnecessary M7,M8(flood on),M9(flood off) commands from being added.
+- **Spindle Speed** - Right now I don't have it hooked up to make use of it, but (as an example) the lines 'S14000 M3' turns the spindle on clockwise at 14,000 rpm. Later the line 'M5' stops the spindle.
+- **End Code** - 'M30'.
