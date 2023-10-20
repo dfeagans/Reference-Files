@@ -23,7 +23,7 @@
 
         $stepper/dirinvert=XY
 
-- **Keep Motors Energized** - This setting leaves the motors energized at all times the system is powered up. Prevents moving when doing tool changes. ***I ACTUALLY SET THIS TO 1 FOR MOST OF MY TESTING SINCE IT WAS QUIETER***
+- **Keep Motors Energized** - This setting leaves the motors energized at all times the system is powered up. The main reason I did it was because my spindle and vacuum system was so heavy that it would slid down if they weren't energized at times. It also prevents moving when doing tool changes. ***I ACTUALLY SET THIS TO 1 FOR MOST OF MY TESTING SINCE IT WAS QUIETER***
 
         $stepper/idletime=255
 
@@ -52,15 +52,16 @@
 
     - I did end up using these settings though, which are default for the acceleration and slower than default for the max rates:
 
-            $X/maxrate=1000
-            $X/acceleration=50
-            $Y/maxrate=1000
-            $Y/acceleration=50
-            $Z/maxrate=1000
-            $Z/acceleration=50
-            $A/maxrate=1000
-            $A/acceleration=50
-   
+            $X/maxrate=2500
+            $X/acceleration=150
+            $Y/maxrate=2500
+            $Y/acceleration=150
+            $Z/maxrate=2500
+            $Z/acceleration=150
+            $A/maxrate=2500
+            $A/acceleration=150
+
+- **See Current Axis Settings** - `$X/`, `$Y/`, `$Z/` will show the settings on each axis.
 - **DTI Check** - I did a quick check with a DTI to make sure all the stepper settings (microsteps and steps per mm) were correct.
 - **Enable Homing** - `$homing/enable=on`
 - **Test Limit Switches** - Use `?` to query the systems status. It'll tell you if a limit switch is on. Confirm all of them work by holding each one and querying the status.
