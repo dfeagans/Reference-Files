@@ -141,3 +141,55 @@ The webUI has fewer buttons than the interface that's served up by the xProV5 it
 - **Coolant** - Set to disabled under the Tool Path, since I don't have it. Prevents the unnecessary M7,M8(flood on),M9(flood off) commands from being added.
 - **Spindle Speed** - Right now I don't have it hooked up to make use of it, but (as an example) the lines 'S14000 M3' turns the spindle on clockwise at 14,000 rpm. Later the line 'M5' stops the spindle.
 - **End Code** - 'M30'.
+
+  ## XYZ Probe:
+  - I had the OpenBuilds XYZ Touch Probe Plus. I wired it using their striaghtforward instructions and made sure to have the jumper set to 5V inside the xPro V5 (it could be disconnected, all it does is make a light turn on when the probe shorts and some noise filtering.
+  - [Wiring Reference](https://docs.openbuilds.com/doku.php?id=docs:xyzprobe:wiringgeneric)
+  - ![image](https://github.com/dfeagans/Reference-Files/assets/4512270/9da505af-2826-4254-84e3-4d2d34470c41)
+  - ![image](https://github.com/dfeagans/Reference-Files/assets/4512270/c31314f3-cdf7-42fe-9d74-2d3906792e35)
+  - Testing: Send '?' to query the machine state and it if the probe isn't shorted it should just send back the normal '<Idle|MPos:0.000,0.000,0.000|FS:0,0|WCO:0.000,0.000,0.000>'. If it's shorted (the light will be green on the probe) you'll get back '<Idle|MPos:0.000,0.000,0.000|FS:0,0|Pn:P|Ov:100,100,100>'. Note the 'Pn:P' addition that indicates the probe is shorted. If you need to toggle it (say it showed 'Pn:P' when NOT shorted, then you check the setting for '$6' (it will either be 0 or 0) and switch it to the alternate setting using '$6=1' or '$6=0'.
+  - Probe Block Dimensions: The offsets caused by the block had to be coded into the macro (below). I measured by block at 10mm X and Y offsets/thickness and 9mm Z offset.
+  - Probe Direction: The code below is set-up to have the block on the bottom left corner of the project (it probes down, then to the rigt and the up to find the Z,X,Y respectively).
+~~~
+  (start with the end mill 15mm ABOVE the plate, about 15mm or less from bottom left corner.)
+
+; Set user-defined variables
+%ENDMILL_DIAMETER = 9.525	;in millimeters
+
+%PROBE_BLOCK_Z = 9;Thickness of 3-axis probe in Z direction
+%PROBE_BLOCK_Y = 10 ;Thickness of 3-axis probe in Y direction
+%PROBE_BLOCK_X = 10 ;Thickness of 3-axis probe in X direction
+
+
+G21	;make sure we're in mm
+G91 ;Incremental mode
+G38.2 Z-25 F75	;Probe Z
+G0 Z2	;lift 2mm
+G38.2 Z-25 F45	;Probe Z
+G4 P0.1
+G10 L20 P1 Z[PROBE_BLOCK_Z]	;Set Current Z as plate thickness
+G4 P0.1
+G0 Z3 ;lift Z 3mm
+G0 X-25	;Move left 25mm
+G0 Z-10	;Move down 10mm, should be 7mm below probe surface
+G38.2 X30 F75	;Probe X to the right 30mm
+G0 X-2
+G38.2 X30 F45	;Probe X to the right 30mm
+G4 P0.1
+G10 L20 P1 X[-ENDMILL_DIAMETER/2 -PROBE_BLOCK_X]	;Set current X location as negative half the bit diameter
+G4 P0.1
+G0 X-20	;Move left 20mm
+G0 Y-35	;Move forward 35mm
+G90 G0 X5	;Move to X5 (absolute) - will put you 5mm to the right of left edge of stock
+G91 ;incremental
+G38.2 Y30 F75	;Probe Y
+G0 Y-2
+G38.2 Y30 F45	;Probe Y
+G4 P0.1
+G10 L20 P1 Y[-ENDMILL_DIAMETER/2 -PROBE_BLOCK_Y]	;Set current Y location as negative half the bit diameter - 7mm thickness
+G4 P0.1
+G0 Y-10	;Move Y-10
+G0 Z10	;Move Z up 10mm, should be 8mm above probe plate
+G90
+G0 X0Y0	;Go to X0Y0
+~~~
