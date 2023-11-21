@@ -162,34 +162,34 @@ The webUI has fewer buttons than the interface that's served up by the xProV5 it
 
 
 G21	;make sure we're in mm
-G91 ;Incremental mode
-G38.2 Z-25 F75	;Probe Z
+G91 ;Incremental mode (move relative)
+G38.2 Z-25 F75	;Probe Z, moving 25mm down at 75mm/min (~0.05"/sec).
 G0 Z2	;lift 2mm
-G38.2 Z-25 F45	;Probe Z
-G4 P0.1
+G38.2 Z-25 F45	;Probe Z again, moving 25mm down at 45mm/min (~0.03"/sec).
+G4 P0.1 ;dwell/pause for 0.1seconds
 G10 L20 P1 Z[PROBE_BLOCK_Z]	;Set Current Z as plate thickness
-G4 P0.1
+G4 P0.1 ;dwell/pause for 0.1seconds
 G0 Z3 ;lift Z 3mm
 G0 X-25	;Move left 25mm
-G0 Z-10	;Move down 10mm, should be 7mm below probe surface
-G38.2 X30 F75	;Probe X to the right 30mm
-G0 X-2
-G38.2 X30 F45	;Probe X to the right 30mm
+G0 Z-9	;Move down 10mm, should be 6mm below probe block's top surface
+G38.2 X30 F75	;Probe X to the right 30mm at 75mm/min (~0.05"/sec).
+G0 X-2          ;Move to the left 2mm to prepare to probe again in next line.
+G38.2 X30 F45	;Probe X to the right 30mm at 45mm/min (~0.03"/sec).
 G4 P0.1
-G10 L20 P1 X[-ENDMILL_DIAMETER/2 -PROBE_BLOCK_X]	;Set current X location as negative half the bit diameter
+G10 L20 P1 X[-ENDMILL_DIAMETER/2 -PROBE_BLOCK_X]	;Set current X location as negative half the bit diameter - Block Wall Thickness
 G4 P0.1
 G0 X-20	;Move left 20mm
 G0 Y-35	;Move forward 35mm
 G90 G0 X5	;Move to X5 (absolute) - will put you 5mm to the right of left edge of stock
-G91 ;incremental
-G38.2 Y30 F75	;Probe Y
-G0 Y-2
-G38.2 Y30 F45	;Probe Y
+G91 ;Incremental mode (move relative)
+G38.2 Y30 F75	;Probe Y by moving up 30mm at 75mm/min (~0.05"/sec).
+G0 Y-2          ;Move forward 2mm to prepare to probe again in next line.
+G38.2 Y30 F45	;Probe Y by moving up 30mm at 45mm/min (~0.03"/sec).
 G4 P0.1
-G10 L20 P1 Y[-ENDMILL_DIAMETER/2 -PROBE_BLOCK_Y]	;Set current Y location as negative half the bit diameter - 7mm thickness
+G10 L20 P1 Y[-ENDMILL_DIAMETER/2 -PROBE_BLOCK_Y]	;Set current Y location as negative half the bit diameter - Block Wall Thickness.
 G4 P0.1
-G0 Y-10	;Move Y-10
-G0 Z10	;Move Z up 10mm, should be 8mm above probe plate
-G90
+G0 Y-10	;Move forwrad 10mm
+G0 Z9	;Raise 9mm
+G90     ;Absolute Mode
 G0 X0Y0	;Go to X0Y0
 ~~~
